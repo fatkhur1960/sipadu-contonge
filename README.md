@@ -44,7 +44,7 @@ $ python3 main.py
 
 4. Build Program
 ```
-$ make prepare && make build
+$ make prepare && make app-build
 ```
 
 ### Credit by
