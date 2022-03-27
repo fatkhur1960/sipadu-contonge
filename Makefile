@@ -2,10 +2,10 @@
 default: prepare
 
 prepare:
-	pyinstaller --windowed --icon=icon.ico --add-data="icon.ico:." main.py
+	pyinstaller --windowed --icon=icon.ico --add-data="icon.ico:." -n "Sipadu Contonge" main.py --noconfirm
 
-build:
-	pyinstaller main.spec
+build-app:
+	pyinstaller main.spec --noconfirm
 
 
 clean:
