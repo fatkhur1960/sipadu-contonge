@@ -1,0 +1,8 @@
+venv
+build
+dist
+data/*.json
+*.ipynb
+__pycache__
+*.spec
+template/.DS_Store

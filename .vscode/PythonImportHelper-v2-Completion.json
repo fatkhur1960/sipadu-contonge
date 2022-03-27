@@ -1,0 +1,2102 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "platform",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "platform",
+        "description": "platform",
+        "detail": "platform",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "textwrap",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "textwrap",
+        "description": "textwrap",
+        "detail": "textwrap",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "StringIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "StringIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "StringIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "IPython.testing.tools",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "IPython.testing.tools",
+        "description": "IPython.testing.tools",
+        "detail": "IPython.testing.tools",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "unittest",
+        "description": "unittest",
+        "isExtraImport": true,
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "unittest",
+        "description": "unittest",
+        "isExtraImport": true,
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "unittest",
+        "description": "unittest",
+        "isExtraImport": true,
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "AutoreloadMagics",
+        "importPath": "IPython.extensions.autoreload",
+        "description": "IPython.extensions.autoreload",
+        "isExtraImport": true,
+        "detail": "IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "AutoreloadMagics",
+        "importPath": "IPython.extensions.autoreload",
+        "description": "IPython.extensions.autoreload",
+        "isExtraImport": true,
+        "detail": "IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "AutoreloadMagics",
+        "importPath": "IPython.extensions.autoreload",
+        "description": "IPython.extensions.autoreload",
+        "isExtraImport": true,
+        "detail": "IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "EventManager",
+        "importPath": "IPython.core.events",
+        "description": "IPython.core.events",
+        "isExtraImport": true,
+        "detail": "IPython.core.events",
+        "documentation": {}
+    },
+    {
+        "label": "pre_run_cell",
+        "importPath": "IPython.core.events",
+        "description": "IPython.core.events",
+        "isExtraImport": true,
+        "detail": "IPython.core.events",
+        "documentation": {}
+    },
+    {
+        "label": "EventManager",
+        "importPath": "IPython.core.events",
+        "description": "IPython.core.events",
+        "isExtraImport": true,
+        "detail": "IPython.core.events",
+        "documentation": {}
+    },
+    {
+        "label": "pre_run_cell",
+        "importPath": "IPython.core.events",
+        "description": "IPython.core.events",
+        "isExtraImport": true,
+        "detail": "IPython.core.events",
+        "documentation": {}
+    },
+    {
+        "label": "EventManager",
+        "importPath": "IPython.core.events",
+        "description": "IPython.core.events",
+        "isExtraImport": true,
+        "detail": "IPython.core.events",
+        "documentation": {}
+    },
+    {
+        "label": "pre_run_cell",
+        "importPath": "IPython.core.events",
+        "description": "IPython.core.events",
+        "isExtraImport": true,
+        "detail": "IPython.core.events",
+        "documentation": {}
+    },
+    {
+        "label": "skipif_not_numpy",
+        "importPath": "IPython.testing.decorators",
+        "description": "IPython.testing.decorators",
+        "isExtraImport": true,
+        "detail": "IPython.testing.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "skipif_not_numpy",
+        "importPath": "IPython.testing.decorators",
+        "description": "IPython.testing.decorators",
+        "isExtraImport": true,
+        "detail": "IPython.testing.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "skipif_not_numpy",
+        "importPath": "IPython.testing.decorators",
+        "description": "IPython.testing.decorators",
+        "isExtraImport": true,
+        "detail": "IPython.testing.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile.",
+        "description": "tempfile.",
+        "detail": "tempfile.",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "traitlets.config.loader",
+        "description": "traitlets.config.loader",
+        "isExtraImport": true,
+        "detail": "traitlets.config.loader",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "traitlets.config.loader",
+        "description": "traitlets.config.loader",
+        "isExtraImport": true,
+        "detail": "traitlets.config.loader",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "traitlets.config.loader",
+        "description": "traitlets.config.loader",
+        "isExtraImport": true,
+        "detail": "traitlets.config.loader",
+        "documentation": {}
+    },
+    {
+        "label": "traceback",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "traceback",
+        "description": "traceback",
+        "detail": "traceback",
+        "documentation": {}
+    },
+    {
+        "label": "types",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "types",
+        "description": "types",
+        "detail": "types",
+        "documentation": {}
+    },
+    {
+        "label": "weakref",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "weakref",
+        "description": "weakref",
+        "detail": "weakref",
+        "documentation": {}
+    },
+    {
+        "label": "gc",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "gc",
+        "description": "gc",
+        "detail": "gc",
+        "documentation": {}
+    },
+    {
+        "label": "import_module",
+        "importPath": "importlib",
+        "description": "importlib",
+        "isExtraImport": true,
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "reload",
+        "importPath": "importlib",
+        "description": "importlib",
+        "isExtraImport": true,
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "import_module",
+        "importPath": "importlib",
+        "description": "importlib",
+        "isExtraImport": true,
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "reload",
+        "importPath": "importlib",
+        "description": "importlib",
+        "isExtraImport": true,
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "import_module",
+        "importPath": "importlib",
+        "description": "importlib",
+        "isExtraImport": true,
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "reload",
+        "importPath": "importlib",
+        "description": "importlib",
+        "isExtraImport": true,
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "source_from_cache",
+        "importPath": "importlib.util",
+        "description": "importlib.util",
+        "isExtraImport": true,
+        "detail": "importlib.util",
+        "documentation": {}
+    },
+    {
+        "label": "source_from_cache",
+        "importPath": "importlib.util",
+        "description": "importlib.util",
+        "isExtraImport": true,
+        "detail": "importlib.util",
+        "documentation": {}
+    },
+    {
+        "label": "source_from_cache",
+        "importPath": "importlib.util",
+        "description": "importlib.util",
+        "isExtraImport": true,
+        "detail": "importlib.util",
+        "documentation": {}
+    },
+    {
+        "label": "Magics",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "magics_class",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "line_magic",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "Magics",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "magics_class",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "line_magic",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "Magics",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "magics_class",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "line_magic",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "Magics",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "magics_class",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "line_magic",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "Magics",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "magics_class",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "line_magic",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "Magics",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "magics_class",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "line_magic",
+        "importPath": "IPython.core.magic",
+        "description": "IPython.core.magic",
+        "isExtraImport": true,
+        "detail": "IPython.core.magic",
+        "documentation": {}
+    },
+    {
+        "label": "inspect,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "inspect.",
+        "description": "inspect.",
+        "detail": "inspect.",
+        "documentation": {}
+    },
+    {
+        "label": "UsageError",
+        "importPath": "IPython.core.error",
+        "description": "IPython.core.error",
+        "isExtraImport": true,
+        "detail": "IPython.core.error",
+        "documentation": {}
+    },
+    {
+        "label": "UsageError",
+        "importPath": "IPython.core.error",
+        "description": "IPython.core.error",
+        "isExtraImport": true,
+        "detail": "IPython.core.error",
+        "documentation": {}
+    },
+    {
+        "label": "UsageError",
+        "importPath": "IPython.core.error",
+        "description": "IPython.core.error",
+        "isExtraImport": true,
+        "detail": "IPython.core.error",
+        "documentation": {}
+    },
+    {
+        "label": "skip_doctest",
+        "importPath": "IPython.testing.skipdoctest",
+        "description": "IPython.testing.skipdoctest",
+        "isExtraImport": true,
+        "detail": "IPython.testing.skipdoctest",
+        "documentation": {}
+    },
+    {
+        "label": "skip_doctest",
+        "importPath": "IPython.testing.skipdoctest",
+        "description": "IPython.testing.skipdoctest",
+        "isExtraImport": true,
+        "detail": "IPython.testing.skipdoctest",
+        "documentation": {}
+    },
+    {
+        "label": "skip_doctest",
+        "importPath": "IPython.testing.skipdoctest",
+        "description": "IPython.testing.skipdoctest",
+        "isExtraImport": true,
+        "detail": "IPython.testing.skipdoctest",
+        "documentation": {}
+    },
+    {
+        "label": "Bool",
+        "importPath": "traitlets",
+        "description": "traitlets",
+        "isExtraImport": true,
+        "detail": "traitlets",
+        "documentation": {}
+    },
+    {
+        "label": "Bool",
+        "importPath": "traitlets",
+        "description": "traitlets",
+        "isExtraImport": true,
+        "detail": "traitlets",
+        "documentation": {}
+    },
+    {
+        "label": "Bool",
+        "importPath": "traitlets",
+        "description": "traitlets",
+        "isExtraImport": true,
+        "detail": "traitlets",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "pformat",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "jmespath",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "isExtraImport": true,
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "warnings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "warnings",
+        "description": "warnings",
+        "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "html",
+        "importPath": "lxml",
+        "description": "lxml",
+        "isExtraImport": true,
+        "detail": "lxml",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QComboBox",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QDateEdit",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFileDialog",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QThread",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QRunnable",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "pyqtSignal",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QObject",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QColor",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QColor",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "BridgeApi",
+        "importPath": "bridge",
+        "description": "bridge",
+        "isExtraImport": true,
+        "detail": "bridge",
+        "documentation": {}
+    },
+    {
+        "label": "BridgeApi",
+        "importPath": "bridge",
+        "description": "bridge",
+        "isExtraImport": true,
+        "detail": "bridge",
+        "documentation": {}
+    },
+    {
+        "label": "ExcelParser",
+        "importPath": "parse_excel",
+        "description": "parse_excel",
+        "isExtraImport": true,
+        "detail": "parse_excel",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_HEADERS",
+        "importPath": "table_headers",
+        "description": "table_headers",
+        "isExtraImport": true,
+        "detail": "table_headers",
+        "documentation": {}
+    },
+    {
+        "label": "LoginWorker",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "UploadWorker",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "FakeShell",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class FakeShell:\n    def __init__(self):\n        self.ns = {}\n        self.user_ns = self.ns\n        self.user_ns_hidden = {}\n        self.events = EventManager(self, {\"pre_run_cell\", pre_run_cell})\n        self.auto_magics = AutoreloadMagics(shell=self)\n        self.events.register(\"pre_run_cell\", self.auto_magics.pre_run_cell)\n    register_magics = set_hook = noop\n    def run_code(self, code):",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Fixture",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Fixture(TestCase):\n    \"\"\"Fixture for creating test module files\"\"\"\n    test_dir = None\n    old_sys_path = None\n    filename_chars = \"abcdefghijklmopqrstuvwxyz0123456789\"\n    def setUp(self):\n        self.test_dir = tempfile.mkdtemp()\n        self.old_sys_path = list(sys.path)\n        sys.path.insert(0, self.test_dir)\n        self.shell = FakeShell()",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "TestAutoreload",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class TestAutoreload(Fixture):\n    def test_reload_enums(self):\n        mod_name, mod_fn = self.new_module(\n            textwrap.dedent(\n                \"\"\"\n                                from enum import Enum\n                                class MyEnum(Enum):\n                                    A = 'A'\n                                    B = 'B'\n                            \"\"\"",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Baz",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property\n    def quux(self):\n        return 42\n    def zzz(self):\n        '''This method will be deleted below'''",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Bar",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Bar:    # old-style class: weakref doesn't work for it on Python < 2.7\n    def foo(self):\n        return 1\n\"\"\"\n        )\n        #\n        # Import module, and mark for reloading\n        #\n        if use_aimport:\n            self.shell.magic_autoreload(\"1\")",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Baz",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y + 1\n    @property\n    def quux(self):\n        return 43\nclass Bar:    # old-style class\n    def foo(self):",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Bar",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Bar:    # old-style class\n    def foo(self):\n        return 2\n\"\"\",\n        )\n        def check_module_contents():\n            self.assertEqual(mod.x, 10)\n            self.assertFalse(hasattr(mod, \"z\"))\n            self.assertEqual(old_foo(0), 4)  # superreload magic!\n            self.assertEqual(mod.foo(0), 4)",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "pickle_get_current_class",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "def pickle_get_current_class(obj):\n    \"\"\"\n    Original issue comes from pickle; hence the name.\n    \"\"\"\n    name = obj.__class__.__name__\n    module_name = getattr(obj, \"__module__\", None)\n    obj2 = sys.modules[module_name]\n    for subpath in name.split(\".\"):\n        obj2 = getattr(obj2, subpath)\n    return obj2",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "foo",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "def foo(y):\n    return y + 3\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property\n    def quux(self):\n        return 42",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "foo",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "def foo(y):\n    return y + 4\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y + 1\n    @property\n    def quux(self):\n        return 43",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "noop",
+        "kind": 5,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "noop = lambda *a, **kw: None\nclass FakeShell:\n    def __init__(self):\n        self.ns = {}\n        self.user_ns = self.ns\n        self.user_ns_hidden = {}\n        self.events = EventManager(self, {\"pre_run_cell\", pre_run_cell})\n        self.auto_magics = AutoreloadMagics(shell=self)\n        self.events.register(\"pre_run_cell\", self.auto_magics.pre_run_cell)\n    register_magics = set_hook = noop",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "x = 9\nz = 123  # this item will be deleted\ndef foo(y):\n    return y + 3\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "z",
+        "kind": 5,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "z = 123  # this item will be deleted\ndef foo(y):\n    return y + 3\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property\n    def quux(self):",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "x = 10\ndef foo(y):\n    return y + 4\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y + 1\n    @property\n    def quux(self):",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "dist.main.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "x = -99\n\"\"\",\n        )\n        self.shell.run_code(\"pass\")  # trigger reload\n        self.shell.run_code(\"pass\")\n        check_module_contents()\n        #\n        # Re-enable autoreload: reload should now occur\n        #\n        if use_aimport:",
+        "detail": "dist.main.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "setup_module",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.tests.test_storemagic",
+        "description": "dist.main.IPython.extensions.tests.test_storemagic",
+        "peekOfCode": "def setup_module():\n    ip.magic('load_ext storemagic')\ndef test_store_restore():\n    assert 'bar' not in ip.user_ns, \"Error: some other test leaked `bar` in user_ns\"\n    assert 'foo' not in ip.user_ns, \"Error: some other test leaked `foo` in user_ns\"\n    assert 'foobar' not in ip.user_ns, \"Error: some other test leaked `foobar` in user_ns\"\n    assert 'foobaz' not in ip.user_ns, \"Error: some other test leaked `foobaz` in user_ns\"\n    ip.user_ns['foo'] = 78\n    ip.magic('alias bar echo \"hello\"')\n    ip.user_ns['foobar'] = 79",
+        "detail": "dist.main.IPython.extensions.tests.test_storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "test_store_restore",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.tests.test_storemagic",
+        "description": "dist.main.IPython.extensions.tests.test_storemagic",
+        "peekOfCode": "def test_store_restore():\n    assert 'bar' not in ip.user_ns, \"Error: some other test leaked `bar` in user_ns\"\n    assert 'foo' not in ip.user_ns, \"Error: some other test leaked `foo` in user_ns\"\n    assert 'foobar' not in ip.user_ns, \"Error: some other test leaked `foobar` in user_ns\"\n    assert 'foobaz' not in ip.user_ns, \"Error: some other test leaked `foobaz` in user_ns\"\n    ip.user_ns['foo'] = 78\n    ip.magic('alias bar echo \"hello\"')\n    ip.user_ns['foobar'] = 79\n    ip.user_ns['foobaz'] = '80'\n    tmpd = tempfile.mkdtemp()",
+        "detail": "dist.main.IPython.extensions.tests.test_storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "test_autorestore",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.tests.test_storemagic",
+        "description": "dist.main.IPython.extensions.tests.test_storemagic",
+        "peekOfCode": "def test_autorestore():\n    ip.user_ns['foo'] = 95\n    ip.magic('store foo')\n    del ip.user_ns['foo']\n    c = Config()\n    c.StoreMagics.autorestore = False\n    orig_config = ip.config\n    try:\n        ip.config = c\n        ip.extension_manager.reload_extension(\"storemagic\")",
+        "detail": "dist.main.IPython.extensions.tests.test_storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "ModuleReloader",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "class ModuleReloader:\n    enabled = False\n    \"\"\"Whether this reloader is enabled\"\"\"\n    check_all = True\n    \"\"\"Autoreload all modules, not just those listed in 'modules'\"\"\"\n    autoload_obj = False\n    \"\"\"Autoreload all modules AND autoload all new objects\"\"\"\n    def __init__(self, shell=None):\n        # Modules that failed to reload: {module: mtime-on-failed-reload, ...}\n        self.failed = {}",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "StrongRef",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "class StrongRef:\n    def __init__(self, obj):\n        self.obj = obj\n    def __call__(self):\n        return self.obj\nmod_attrs = [\n    \"__name__\",\n    \"__doc__\",\n    \"__package__\",\n    \"__loader__\",",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "AutoreloadMagics",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "class AutoreloadMagics(Magics):\n    def __init__(self, *a, **kw):\n        super().__init__(*a, **kw)\n        self._reloader = ModuleReloader(self.shell)\n        self._reloader.check_all = False\n        self._reloader.autoload_obj = False\n        self.loaded_modules = set(sys.modules)\n    @line_magic\n    def autoreload(self, parameter_s=\"\"):\n        r\"\"\"%autoreload => Reload modules automatically",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_function",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "def update_function(old, new):\n    \"\"\"Upgrade the code object of a function\"\"\"\n    for name in func_attrs:\n        try:\n            setattr(old, name, getattr(new, name))\n        except (AttributeError, TypeError):\n            pass\ndef update_instances(old, new):\n    \"\"\"Use garbage collector to find all instances that refer to the old\n    class definition and update their __class__ to point to the new class",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_instances",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "def update_instances(old, new):\n    \"\"\"Use garbage collector to find all instances that refer to the old\n    class definition and update their __class__ to point to the new class\n    definition\"\"\"\n    refs = gc.get_referrers(old)\n    for ref in refs:\n        if type(ref) is old:\n            ref.__class__ = new\ndef update_class(old, new):\n    \"\"\"Replace stuff in the __dict__ of a class, and upgrade",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_class",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "def update_class(old, new):\n    \"\"\"Replace stuff in the __dict__ of a class, and upgrade\n    method code objects, and add new methods, if any\"\"\"\n    for key in list(old.__dict__.keys()):\n        old_obj = getattr(old, key)\n        try:\n            new_obj = getattr(new, key)\n            # explicitly checking that comparison returns True to handle\n            # cases where `==` doesn't return a boolean.\n            if (old_obj == new_obj) is True:",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_property",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "def update_property(old, new):\n    \"\"\"Replace get/set/del functions of a property\"\"\"\n    update_generic(old.fdel, new.fdel)\n    update_generic(old.fget, new.fget)\n    update_generic(old.fset, new.fset)\ndef isinstance2(a, b, typ):\n    return isinstance(a, typ) and isinstance(b, typ)\nUPDATE_RULES = [\n    (lambda a, b: isinstance2(a, b, type), update_class),\n    (lambda a, b: isinstance2(a, b, types.FunctionType), update_function),",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "isinstance2",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "def isinstance2(a, b, typ):\n    return isinstance(a, typ) and isinstance(b, typ)\nUPDATE_RULES = [\n    (lambda a, b: isinstance2(a, b, type), update_class),\n    (lambda a, b: isinstance2(a, b, types.FunctionType), update_function),\n    (lambda a, b: isinstance2(a, b, property), update_property),\n]\nUPDATE_RULES.extend(\n    [\n        (",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_generic",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "def update_generic(a, b):\n    for type_check, update in UPDATE_RULES:\n        if type_check(a, b):\n            update(a, b)\n            return True\n    return False\nclass StrongRef:\n    def __init__(self, obj):\n        self.obj = obj\n    def __call__(self):",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "append_obj",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "def append_obj(module, d, name, obj, autoload=False):\n    in_module = hasattr(obj, \"__module__\") and obj.__module__ == module.__name__\n    if autoload:\n        # check needed for module global built-ins\n        if not in_module and name in mod_attrs:\n            return False\n    else:\n        if not in_module:\n            return False\n    key = (module.__name__, name)",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "superreload",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "def superreload(module, reload=reload, old_objects=None, shell=None):\n    \"\"\"Enhanced version of the builtin reload function.\n    superreload remembers objects previously in the module, and\n    - upgrades the class dictionary of every old class in the module\n    - upgrades the code object of every old function and method\n    - clears the module's namespace before reloading\n    \"\"\"\n    if old_objects is None:\n        old_objects = {}\n    # collect old objects in the module",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "load_ipython_extension",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "def load_ipython_extension(ip):\n    \"\"\"Load the extension in IPython.\"\"\"\n    auto_reload = AutoreloadMagics(ip)\n    ip.register_magics(auto_reload)\n    ip.events.register(\"pre_run_cell\", auto_reload.pre_run_cell)\n    ip.events.register(\"post_execute\", auto_reload.post_execute_hook)",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "__skip_doctest__",
+        "kind": 5,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "__skip_doctest__ = True\n# -----------------------------------------------------------------------------\n#  Copyright (C) 2000 Thomas Heller\n#  Copyright (C) 2008 Pauli Virtanen <pav@iki.fi>\n#  Copyright (C) 2012  The IPython Development Team\n#\n#  Distributed under the terms of the BSD License.  The full license is in\n#  the file COPYING, distributed as part of this software.\n# -----------------------------------------------------------------------------\n#",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "func_attrs",
+        "kind": 5,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "func_attrs = [\n    \"__code__\",\n    \"__defaults__\",\n    \"__doc__\",\n    \"__closure__\",\n    \"__globals__\",\n    \"__dict__\",\n]\ndef update_function(old, new):\n    \"\"\"Upgrade the code object of a function\"\"\"",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "UPDATE_RULES",
+        "kind": 5,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "UPDATE_RULES = [\n    (lambda a, b: isinstance2(a, b, type), update_class),\n    (lambda a, b: isinstance2(a, b, types.FunctionType), update_function),\n    (lambda a, b: isinstance2(a, b, property), update_property),\n]\nUPDATE_RULES.extend(\n    [\n        (\n            lambda a, b: isinstance2(a, b, types.MethodType),\n            lambda a, b: update_function(a.__func__, b.__func__),",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "mod_attrs",
+        "kind": 5,
+        "importPath": "dist.main.IPython.extensions.autoreload",
+        "description": "dist.main.IPython.extensions.autoreload",
+        "peekOfCode": "mod_attrs = [\n    \"__name__\",\n    \"__doc__\",\n    \"__package__\",\n    \"__loader__\",\n    \"__spec__\",\n    \"__file__\",\n    \"__cached__\",\n    \"__builtins__\",\n]",
+        "detail": "dist.main.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "StoreMagics",
+        "kind": 6,
+        "importPath": "dist.main.IPython.extensions.storemagic",
+        "description": "dist.main.IPython.extensions.storemagic",
+        "peekOfCode": "class StoreMagics(Magics):\n    \"\"\"Lightweight persistence for python variables.\n    Provides the %store magic.\"\"\"\n    autorestore = Bool(False, help=\n        \"\"\"If True, any %store-d variables will be automatically restored\n        when IPython starts.\n        \"\"\"\n    ).tag(config=True)\n    def __init__(self, shell):\n        super(StoreMagics, self).__init__(shell=shell)",
+        "detail": "dist.main.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "restore_aliases",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.storemagic",
+        "description": "dist.main.IPython.extensions.storemagic",
+        "peekOfCode": "def restore_aliases(ip, alias=None):\n    staliases = ip.db.get('stored_aliases', {})\n    if alias is None:\n        for k,v in staliases.items():\n            #print \"restore alias\",k,v # dbg\n            #self.alias_table[k] = v\n            ip.alias_manager.define_alias(k,v)\n    else:\n        ip.alias_manager.define_alias(alias, staliases[alias])\ndef refresh_variables(ip):",
+        "detail": "dist.main.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "refresh_variables",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.storemagic",
+        "description": "dist.main.IPython.extensions.storemagic",
+        "peekOfCode": "def refresh_variables(ip):\n    db = ip.db\n    for key in db.keys('autorestore/*'):\n        # strip autorestore\n        justkey = os.path.basename(key)\n        try:\n            obj = db[key]\n        except KeyError:\n            print(\"Unable to restore variable '%s', ignoring (use %%store -d to forget!)\" % justkey)\n            print(\"The error was:\", sys.exc_info()[0])",
+        "detail": "dist.main.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "restore_dhist",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.storemagic",
+        "description": "dist.main.IPython.extensions.storemagic",
+        "peekOfCode": "def restore_dhist(ip):\n    ip.user_ns['_dh'] = ip.db.get('dhist',[])\ndef restore_data(ip):\n    refresh_variables(ip)\n    restore_aliases(ip)\n    restore_dhist(ip)\n@magics_class\nclass StoreMagics(Magics):\n    \"\"\"Lightweight persistence for python variables.\n    Provides the %store magic.\"\"\"",
+        "detail": "dist.main.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "restore_data",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.storemagic",
+        "description": "dist.main.IPython.extensions.storemagic",
+        "peekOfCode": "def restore_data(ip):\n    refresh_variables(ip)\n    restore_aliases(ip)\n    restore_dhist(ip)\n@magics_class\nclass StoreMagics(Magics):\n    \"\"\"Lightweight persistence for python variables.\n    Provides the %store magic.\"\"\"\n    autorestore = Bool(False, help=\n        \"\"\"If True, any %store-d variables will be automatically restored",
+        "detail": "dist.main.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "load_ipython_extension",
+        "kind": 2,
+        "importPath": "dist.main.IPython.extensions.storemagic",
+        "description": "dist.main.IPython.extensions.storemagic",
+        "peekOfCode": "def load_ipython_extension(ip):\n    \"\"\"Load the extension in IPython.\"\"\"\n    ip.register_magics(StoreMagics)",
+        "detail": "dist.main.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "FakeShell",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class FakeShell:\n    def __init__(self):\n        self.ns = {}\n        self.user_ns = self.ns\n        self.user_ns_hidden = {}\n        self.events = EventManager(self, {\"pre_run_cell\", pre_run_cell})\n        self.auto_magics = AutoreloadMagics(shell=self)\n        self.events.register(\"pre_run_cell\", self.auto_magics.pre_run_cell)\n    register_magics = set_hook = noop\n    def run_code(self, code):",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Fixture",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Fixture(TestCase):\n    \"\"\"Fixture for creating test module files\"\"\"\n    test_dir = None\n    old_sys_path = None\n    filename_chars = \"abcdefghijklmopqrstuvwxyz0123456789\"\n    def setUp(self):\n        self.test_dir = tempfile.mkdtemp()\n        self.old_sys_path = list(sys.path)\n        sys.path.insert(0, self.test_dir)\n        self.shell = FakeShell()",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "TestAutoreload",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class TestAutoreload(Fixture):\n    def test_reload_enums(self):\n        mod_name, mod_fn = self.new_module(\n            textwrap.dedent(\n                \"\"\"\n                                from enum import Enum\n                                class MyEnum(Enum):\n                                    A = 'A'\n                                    B = 'B'\n                            \"\"\"",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Baz",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property\n    def quux(self):\n        return 42\n    def zzz(self):\n        '''This method will be deleted below'''",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Bar",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Bar:    # old-style class: weakref doesn't work for it on Python < 2.7\n    def foo(self):\n        return 1\n\"\"\"\n        )\n        #\n        # Import module, and mark for reloading\n        #\n        if use_aimport:\n            self.shell.magic_autoreload(\"1\")",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Baz",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y + 1\n    @property\n    def quux(self):\n        return 43\nclass Bar:    # old-style class\n    def foo(self):",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Bar",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Bar:    # old-style class\n    def foo(self):\n        return 2\n\"\"\",\n        )\n        def check_module_contents():\n            self.assertEqual(mod.x, 10)\n            self.assertFalse(hasattr(mod, \"z\"))\n            self.assertEqual(old_foo(0), 4)  # superreload magic!\n            self.assertEqual(mod.foo(0), 4)",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "pickle_get_current_class",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "def pickle_get_current_class(obj):\n    \"\"\"\n    Original issue comes from pickle; hence the name.\n    \"\"\"\n    name = obj.__class__.__name__\n    module_name = getattr(obj, \"__module__\", None)\n    obj2 = sys.modules[module_name]\n    for subpath in name.split(\".\"):\n        obj2 = getattr(obj2, subpath)\n    return obj2",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "foo",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "def foo(y):\n    return y + 3\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property\n    def quux(self):\n        return 42",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "foo",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "def foo(y):\n    return y + 4\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y + 1\n    @property\n    def quux(self):\n        return 43",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "noop",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "noop = lambda *a, **kw: None\nclass FakeShell:\n    def __init__(self):\n        self.ns = {}\n        self.user_ns = self.ns\n        self.user_ns_hidden = {}\n        self.events = EventManager(self, {\"pre_run_cell\", pre_run_cell})\n        self.auto_magics = AutoreloadMagics(shell=self)\n        self.events.register(\"pre_run_cell\", self.auto_magics.pre_run_cell)\n    register_magics = set_hook = noop",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "x = 9\nz = 123  # this item will be deleted\ndef foo(y):\n    return y + 3\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "z",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "z = 123  # this item will be deleted\ndef foo(y):\n    return y + 3\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property\n    def quux(self):",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "x = 10\ndef foo(y):\n    return y + 4\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y + 1\n    @property\n    def quux(self):",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "x = -99\n\"\"\",\n        )\n        self.shell.run_code(\"pass\")  # trigger reload\n        self.shell.run_code(\"pass\")\n        check_module_contents()\n        #\n        # Re-enable autoreload: reload should now occur\n        #\n        if use_aimport:",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "setup_module",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_storemagic",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_storemagic",
+        "peekOfCode": "def setup_module():\n    ip.magic('load_ext storemagic')\ndef test_store_restore():\n    assert 'bar' not in ip.user_ns, \"Error: some other test leaked `bar` in user_ns\"\n    assert 'foo' not in ip.user_ns, \"Error: some other test leaked `foo` in user_ns\"\n    assert 'foobar' not in ip.user_ns, \"Error: some other test leaked `foobar` in user_ns\"\n    assert 'foobaz' not in ip.user_ns, \"Error: some other test leaked `foobaz` in user_ns\"\n    ip.user_ns['foo'] = 78\n    ip.magic('alias bar echo \"hello\"')\n    ip.user_ns['foobar'] = 79",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "test_store_restore",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_storemagic",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_storemagic",
+        "peekOfCode": "def test_store_restore():\n    assert 'bar' not in ip.user_ns, \"Error: some other test leaked `bar` in user_ns\"\n    assert 'foo' not in ip.user_ns, \"Error: some other test leaked `foo` in user_ns\"\n    assert 'foobar' not in ip.user_ns, \"Error: some other test leaked `foobar` in user_ns\"\n    assert 'foobaz' not in ip.user_ns, \"Error: some other test leaked `foobaz` in user_ns\"\n    ip.user_ns['foo'] = 78\n    ip.magic('alias bar echo \"hello\"')\n    ip.user_ns['foobar'] = 79\n    ip.user_ns['foobaz'] = '80'\n    tmpd = tempfile.mkdtemp()",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "test_autorestore",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_storemagic",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_storemagic",
+        "peekOfCode": "def test_autorestore():\n    ip.user_ns['foo'] = 95\n    ip.magic('store foo')\n    del ip.user_ns['foo']\n    c = Config()\n    c.StoreMagics.autorestore = False\n    orig_config = ip.config\n    try:\n        ip.config = c\n        ip.extension_manager.reload_extension(\"storemagic\")",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.tests.test_storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "ModuleReloader",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "class ModuleReloader:\n    enabled = False\n    \"\"\"Whether this reloader is enabled\"\"\"\n    check_all = True\n    \"\"\"Autoreload all modules, not just those listed in 'modules'\"\"\"\n    autoload_obj = False\n    \"\"\"Autoreload all modules AND autoload all new objects\"\"\"\n    def __init__(self, shell=None):\n        # Modules that failed to reload: {module: mtime-on-failed-reload, ...}\n        self.failed = {}",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "StrongRef",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "class StrongRef:\n    def __init__(self, obj):\n        self.obj = obj\n    def __call__(self):\n        return self.obj\nmod_attrs = [\n    \"__name__\",\n    \"__doc__\",\n    \"__package__\",\n    \"__loader__\",",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "AutoreloadMagics",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "class AutoreloadMagics(Magics):\n    def __init__(self, *a, **kw):\n        super().__init__(*a, **kw)\n        self._reloader = ModuleReloader(self.shell)\n        self._reloader.check_all = False\n        self._reloader.autoload_obj = False\n        self.loaded_modules = set(sys.modules)\n    @line_magic\n    def autoreload(self, parameter_s=\"\"):\n        r\"\"\"%autoreload => Reload modules automatically",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_function",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "def update_function(old, new):\n    \"\"\"Upgrade the code object of a function\"\"\"\n    for name in func_attrs:\n        try:\n            setattr(old, name, getattr(new, name))\n        except (AttributeError, TypeError):\n            pass\ndef update_instances(old, new):\n    \"\"\"Use garbage collector to find all instances that refer to the old\n    class definition and update their __class__ to point to the new class",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_instances",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "def update_instances(old, new):\n    \"\"\"Use garbage collector to find all instances that refer to the old\n    class definition and update their __class__ to point to the new class\n    definition\"\"\"\n    refs = gc.get_referrers(old)\n    for ref in refs:\n        if type(ref) is old:\n            ref.__class__ = new\ndef update_class(old, new):\n    \"\"\"Replace stuff in the __dict__ of a class, and upgrade",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_class",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "def update_class(old, new):\n    \"\"\"Replace stuff in the __dict__ of a class, and upgrade\n    method code objects, and add new methods, if any\"\"\"\n    for key in list(old.__dict__.keys()):\n        old_obj = getattr(old, key)\n        try:\n            new_obj = getattr(new, key)\n            # explicitly checking that comparison returns True to handle\n            # cases where `==` doesn't return a boolean.\n            if (old_obj == new_obj) is True:",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_property",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "def update_property(old, new):\n    \"\"\"Replace get/set/del functions of a property\"\"\"\n    update_generic(old.fdel, new.fdel)\n    update_generic(old.fget, new.fget)\n    update_generic(old.fset, new.fset)\ndef isinstance2(a, b, typ):\n    return isinstance(a, typ) and isinstance(b, typ)\nUPDATE_RULES = [\n    (lambda a, b: isinstance2(a, b, type), update_class),\n    (lambda a, b: isinstance2(a, b, types.FunctionType), update_function),",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "isinstance2",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "def isinstance2(a, b, typ):\n    return isinstance(a, typ) and isinstance(b, typ)\nUPDATE_RULES = [\n    (lambda a, b: isinstance2(a, b, type), update_class),\n    (lambda a, b: isinstance2(a, b, types.FunctionType), update_function),\n    (lambda a, b: isinstance2(a, b, property), update_property),\n]\nUPDATE_RULES.extend(\n    [\n        (",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_generic",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "def update_generic(a, b):\n    for type_check, update in UPDATE_RULES:\n        if type_check(a, b):\n            update(a, b)\n            return True\n    return False\nclass StrongRef:\n    def __init__(self, obj):\n        self.obj = obj\n    def __call__(self):",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "append_obj",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "def append_obj(module, d, name, obj, autoload=False):\n    in_module = hasattr(obj, \"__module__\") and obj.__module__ == module.__name__\n    if autoload:\n        # check needed for module global built-ins\n        if not in_module and name in mod_attrs:\n            return False\n    else:\n        if not in_module:\n            return False\n    key = (module.__name__, name)",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "superreload",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "def superreload(module, reload=reload, old_objects=None, shell=None):\n    \"\"\"Enhanced version of the builtin reload function.\n    superreload remembers objects previously in the module, and\n    - upgrades the class dictionary of every old class in the module\n    - upgrades the code object of every old function and method\n    - clears the module's namespace before reloading\n    \"\"\"\n    if old_objects is None:\n        old_objects = {}\n    # collect old objects in the module",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "load_ipython_extension",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "def load_ipython_extension(ip):\n    \"\"\"Load the extension in IPython.\"\"\"\n    auto_reload = AutoreloadMagics(ip)\n    ip.register_magics(auto_reload)\n    ip.events.register(\"pre_run_cell\", auto_reload.pre_run_cell)\n    ip.events.register(\"post_execute\", auto_reload.post_execute_hook)",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "__skip_doctest__",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "__skip_doctest__ = True\n# -----------------------------------------------------------------------------\n#  Copyright (C) 2000 Thomas Heller\n#  Copyright (C) 2008 Pauli Virtanen <pav@iki.fi>\n#  Copyright (C) 2012  The IPython Development Team\n#\n#  Distributed under the terms of the BSD License.  The full license is in\n#  the file COPYING, distributed as part of this software.\n# -----------------------------------------------------------------------------\n#",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "func_attrs",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "func_attrs = [\n    \"__code__\",\n    \"__defaults__\",\n    \"__doc__\",\n    \"__closure__\",\n    \"__globals__\",\n    \"__dict__\",\n]\ndef update_function(old, new):\n    \"\"\"Upgrade the code object of a function\"\"\"",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "UPDATE_RULES",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "UPDATE_RULES = [\n    (lambda a, b: isinstance2(a, b, type), update_class),\n    (lambda a, b: isinstance2(a, b, types.FunctionType), update_function),\n    (lambda a, b: isinstance2(a, b, property), update_property),\n]\nUPDATE_RULES.extend(\n    [\n        (\n            lambda a, b: isinstance2(a, b, types.MethodType),\n            lambda a, b: update_function(a.__func__, b.__func__),",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "mod_attrs",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "peekOfCode": "mod_attrs = [\n    \"__name__\",\n    \"__doc__\",\n    \"__package__\",\n    \"__loader__\",\n    \"__spec__\",\n    \"__file__\",\n    \"__cached__\",\n    \"__builtins__\",\n]",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "StoreMagics",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "peekOfCode": "class StoreMagics(Magics):\n    \"\"\"Lightweight persistence for python variables.\n    Provides the %store magic.\"\"\"\n    autorestore = Bool(False, help=\n        \"\"\"If True, any %store-d variables will be automatically restored\n        when IPython starts.\n        \"\"\"\n    ).tag(config=True)\n    def __init__(self, shell):\n        super(StoreMagics, self).__init__(shell=shell)",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "restore_aliases",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "peekOfCode": "def restore_aliases(ip, alias=None):\n    staliases = ip.db.get('stored_aliases', {})\n    if alias is None:\n        for k,v in staliases.items():\n            #print \"restore alias\",k,v # dbg\n            #self.alias_table[k] = v\n            ip.alias_manager.define_alias(k,v)\n    else:\n        ip.alias_manager.define_alias(alias, staliases[alias])\ndef refresh_variables(ip):",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "refresh_variables",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "peekOfCode": "def refresh_variables(ip):\n    db = ip.db\n    for key in db.keys('autorestore/*'):\n        # strip autorestore\n        justkey = os.path.basename(key)\n        try:\n            obj = db[key]\n        except KeyError:\n            print(\"Unable to restore variable '%s', ignoring (use %%store -d to forget!)\" % justkey)\n            print(\"The error was:\", sys.exc_info()[0])",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "restore_dhist",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "peekOfCode": "def restore_dhist(ip):\n    ip.user_ns['_dh'] = ip.db.get('dhist',[])\ndef restore_data(ip):\n    refresh_variables(ip)\n    restore_aliases(ip)\n    restore_dhist(ip)\n@magics_class\nclass StoreMagics(Magics):\n    \"\"\"Lightweight persistence for python variables.\n    Provides the %store magic.\"\"\"",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "restore_data",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "peekOfCode": "def restore_data(ip):\n    refresh_variables(ip)\n    restore_aliases(ip)\n    restore_dhist(ip)\n@magics_class\nclass StoreMagics(Magics):\n    \"\"\"Lightweight persistence for python variables.\n    Provides the %store magic.\"\"\"\n    autorestore = Bool(False, help=\n        \"\"\"If True, any %store-d variables will be automatically restored",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "load_ipython_extension",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "peekOfCode": "def load_ipython_extension(ip):\n    \"\"\"Load the extension in IPython.\"\"\"\n    ip.register_magics(StoreMagics)",
+        "detail": "dist.main.app.Contents.MacOS.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "FakeShell",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class FakeShell:\n    def __init__(self):\n        self.ns = {}\n        self.user_ns = self.ns\n        self.user_ns_hidden = {}\n        self.events = EventManager(self, {\"pre_run_cell\", pre_run_cell})\n        self.auto_magics = AutoreloadMagics(shell=self)\n        self.events.register(\"pre_run_cell\", self.auto_magics.pre_run_cell)\n    register_magics = set_hook = noop\n    def run_code(self, code):",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Fixture",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Fixture(TestCase):\n    \"\"\"Fixture for creating test module files\"\"\"\n    test_dir = None\n    old_sys_path = None\n    filename_chars = \"abcdefghijklmopqrstuvwxyz0123456789\"\n    def setUp(self):\n        self.test_dir = tempfile.mkdtemp()\n        self.old_sys_path = list(sys.path)\n        sys.path.insert(0, self.test_dir)\n        self.shell = FakeShell()",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "TestAutoreload",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class TestAutoreload(Fixture):\n    def test_reload_enums(self):\n        mod_name, mod_fn = self.new_module(\n            textwrap.dedent(\n                \"\"\"\n                                from enum import Enum\n                                class MyEnum(Enum):\n                                    A = 'A'\n                                    B = 'B'\n                            \"\"\"",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Baz",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property\n    def quux(self):\n        return 42\n    def zzz(self):\n        '''This method will be deleted below'''",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Bar",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Bar:    # old-style class: weakref doesn't work for it on Python < 2.7\n    def foo(self):\n        return 1\n\"\"\"\n        )\n        #\n        # Import module, and mark for reloading\n        #\n        if use_aimport:\n            self.shell.magic_autoreload(\"1\")",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Baz",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y + 1\n    @property\n    def quux(self):\n        return 43\nclass Bar:    # old-style class\n    def foo(self):",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "Bar",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "class Bar:    # old-style class\n    def foo(self):\n        return 2\n\"\"\",\n        )\n        def check_module_contents():\n            self.assertEqual(mod.x, 10)\n            self.assertFalse(hasattr(mod, \"z\"))\n            self.assertEqual(old_foo(0), 4)  # superreload magic!\n            self.assertEqual(mod.foo(0), 4)",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "pickle_get_current_class",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "def pickle_get_current_class(obj):\n    \"\"\"\n    Original issue comes from pickle; hence the name.\n    \"\"\"\n    name = obj.__class__.__name__\n    module_name = getattr(obj, \"__module__\", None)\n    obj2 = sys.modules[module_name]\n    for subpath in name.split(\".\"):\n        obj2 = getattr(obj2, subpath)\n    return obj2",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "foo",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "def foo(y):\n    return y + 3\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property\n    def quux(self):\n        return 42",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "foo",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "def foo(y):\n    return y + 4\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y + 1\n    @property\n    def quux(self):\n        return 43",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "noop",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "noop = lambda *a, **kw: None\nclass FakeShell:\n    def __init__(self):\n        self.ns = {}\n        self.user_ns = self.ns\n        self.user_ns_hidden = {}\n        self.events = EventManager(self, {\"pre_run_cell\", pre_run_cell})\n        self.auto_magics = AutoreloadMagics(shell=self)\n        self.events.register(\"pre_run_cell\", self.auto_magics.pre_run_cell)\n    register_magics = set_hook = noop",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "x = 9\nz = 123  # this item will be deleted\ndef foo(y):\n    return y + 3\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "z",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "z = 123  # this item will be deleted\ndef foo(y):\n    return y + 3\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y\n    @property\n    def quux(self):",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "x = 10\ndef foo(y):\n    return y + 4\nclass Baz(object):\n    def __init__(self, x):\n        self.x = x\n    def bar(self, y):\n        return self.x + y + 1\n    @property\n    def quux(self):",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "peekOfCode": "x = -99\n\"\"\",\n        )\n        self.shell.run_code(\"pass\")  # trigger reload\n        self.shell.run_code(\"pass\")\n        check_module_contents()\n        #\n        # Re-enable autoreload: reload should now occur\n        #\n        if use_aimport:",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "setup_module",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_storemagic",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_storemagic",
+        "peekOfCode": "def setup_module():\n    ip.magic('load_ext storemagic')\ndef test_store_restore():\n    assert 'bar' not in ip.user_ns, \"Error: some other test leaked `bar` in user_ns\"\n    assert 'foo' not in ip.user_ns, \"Error: some other test leaked `foo` in user_ns\"\n    assert 'foobar' not in ip.user_ns, \"Error: some other test leaked `foobar` in user_ns\"\n    assert 'foobaz' not in ip.user_ns, \"Error: some other test leaked `foobaz` in user_ns\"\n    ip.user_ns['foo'] = 78\n    ip.magic('alias bar echo \"hello\"')\n    ip.user_ns['foobar'] = 79",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "test_store_restore",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_storemagic",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_storemagic",
+        "peekOfCode": "def test_store_restore():\n    assert 'bar' not in ip.user_ns, \"Error: some other test leaked `bar` in user_ns\"\n    assert 'foo' not in ip.user_ns, \"Error: some other test leaked `foo` in user_ns\"\n    assert 'foobar' not in ip.user_ns, \"Error: some other test leaked `foobar` in user_ns\"\n    assert 'foobaz' not in ip.user_ns, \"Error: some other test leaked `foobaz` in user_ns\"\n    ip.user_ns['foo'] = 78\n    ip.magic('alias bar echo \"hello\"')\n    ip.user_ns['foobar'] = 79\n    ip.user_ns['foobaz'] = '80'\n    tmpd = tempfile.mkdtemp()",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "test_autorestore",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_storemagic",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_storemagic",
+        "peekOfCode": "def test_autorestore():\n    ip.user_ns['foo'] = 95\n    ip.magic('store foo')\n    del ip.user_ns['foo']\n    c = Config()\n    c.StoreMagics.autorestore = False\n    orig_config = ip.config\n    try:\n        ip.config = c\n        ip.extension_manager.reload_extension(\"storemagic\")",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.tests.test_storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "ModuleReloader",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "class ModuleReloader:\n    enabled = False\n    \"\"\"Whether this reloader is enabled\"\"\"\n    check_all = True\n    \"\"\"Autoreload all modules, not just those listed in 'modules'\"\"\"\n    autoload_obj = False\n    \"\"\"Autoreload all modules AND autoload all new objects\"\"\"\n    def __init__(self, shell=None):\n        # Modules that failed to reload: {module: mtime-on-failed-reload, ...}\n        self.failed = {}",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "StrongRef",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "class StrongRef:\n    def __init__(self, obj):\n        self.obj = obj\n    def __call__(self):\n        return self.obj\nmod_attrs = [\n    \"__name__\",\n    \"__doc__\",\n    \"__package__\",\n    \"__loader__\",",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "AutoreloadMagics",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "class AutoreloadMagics(Magics):\n    def __init__(self, *a, **kw):\n        super().__init__(*a, **kw)\n        self._reloader = ModuleReloader(self.shell)\n        self._reloader.check_all = False\n        self._reloader.autoload_obj = False\n        self.loaded_modules = set(sys.modules)\n    @line_magic\n    def autoreload(self, parameter_s=\"\"):\n        r\"\"\"%autoreload => Reload modules automatically",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_function",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "def update_function(old, new):\n    \"\"\"Upgrade the code object of a function\"\"\"\n    for name in func_attrs:\n        try:\n            setattr(old, name, getattr(new, name))\n        except (AttributeError, TypeError):\n            pass\ndef update_instances(old, new):\n    \"\"\"Use garbage collector to find all instances that refer to the old\n    class definition and update their __class__ to point to the new class",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_instances",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "def update_instances(old, new):\n    \"\"\"Use garbage collector to find all instances that refer to the old\n    class definition and update their __class__ to point to the new class\n    definition\"\"\"\n    refs = gc.get_referrers(old)\n    for ref in refs:\n        if type(ref) is old:\n            ref.__class__ = new\ndef update_class(old, new):\n    \"\"\"Replace stuff in the __dict__ of a class, and upgrade",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_class",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "def update_class(old, new):\n    \"\"\"Replace stuff in the __dict__ of a class, and upgrade\n    method code objects, and add new methods, if any\"\"\"\n    for key in list(old.__dict__.keys()):\n        old_obj = getattr(old, key)\n        try:\n            new_obj = getattr(new, key)\n            # explicitly checking that comparison returns True to handle\n            # cases where `==` doesn't return a boolean.\n            if (old_obj == new_obj) is True:",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_property",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "def update_property(old, new):\n    \"\"\"Replace get/set/del functions of a property\"\"\"\n    update_generic(old.fdel, new.fdel)\n    update_generic(old.fget, new.fget)\n    update_generic(old.fset, new.fset)\ndef isinstance2(a, b, typ):\n    return isinstance(a, typ) and isinstance(b, typ)\nUPDATE_RULES = [\n    (lambda a, b: isinstance2(a, b, type), update_class),\n    (lambda a, b: isinstance2(a, b, types.FunctionType), update_function),",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "isinstance2",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "def isinstance2(a, b, typ):\n    return isinstance(a, typ) and isinstance(b, typ)\nUPDATE_RULES = [\n    (lambda a, b: isinstance2(a, b, type), update_class),\n    (lambda a, b: isinstance2(a, b, types.FunctionType), update_function),\n    (lambda a, b: isinstance2(a, b, property), update_property),\n]\nUPDATE_RULES.extend(\n    [\n        (",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "update_generic",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "def update_generic(a, b):\n    for type_check, update in UPDATE_RULES:\n        if type_check(a, b):\n            update(a, b)\n            return True\n    return False\nclass StrongRef:\n    def __init__(self, obj):\n        self.obj = obj\n    def __call__(self):",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "append_obj",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "def append_obj(module, d, name, obj, autoload=False):\n    in_module = hasattr(obj, \"__module__\") and obj.__module__ == module.__name__\n    if autoload:\n        # check needed for module global built-ins\n        if not in_module and name in mod_attrs:\n            return False\n    else:\n        if not in_module:\n            return False\n    key = (module.__name__, name)",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "superreload",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "def superreload(module, reload=reload, old_objects=None, shell=None):\n    \"\"\"Enhanced version of the builtin reload function.\n    superreload remembers objects previously in the module, and\n    - upgrades the class dictionary of every old class in the module\n    - upgrades the code object of every old function and method\n    - clears the module's namespace before reloading\n    \"\"\"\n    if old_objects is None:\n        old_objects = {}\n    # collect old objects in the module",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "load_ipython_extension",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "def load_ipython_extension(ip):\n    \"\"\"Load the extension in IPython.\"\"\"\n    auto_reload = AutoreloadMagics(ip)\n    ip.register_magics(auto_reload)\n    ip.events.register(\"pre_run_cell\", auto_reload.pre_run_cell)\n    ip.events.register(\"post_execute\", auto_reload.post_execute_hook)",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "__skip_doctest__",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "__skip_doctest__ = True\n# -----------------------------------------------------------------------------\n#  Copyright (C) 2000 Thomas Heller\n#  Copyright (C) 2008 Pauli Virtanen <pav@iki.fi>\n#  Copyright (C) 2012  The IPython Development Team\n#\n#  Distributed under the terms of the BSD License.  The full license is in\n#  the file COPYING, distributed as part of this software.\n# -----------------------------------------------------------------------------\n#",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "func_attrs",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "func_attrs = [\n    \"__code__\",\n    \"__defaults__\",\n    \"__doc__\",\n    \"__closure__\",\n    \"__globals__\",\n    \"__dict__\",\n]\ndef update_function(old, new):\n    \"\"\"Upgrade the code object of a function\"\"\"",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "UPDATE_RULES",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "UPDATE_RULES = [\n    (lambda a, b: isinstance2(a, b, type), update_class),\n    (lambda a, b: isinstance2(a, b, types.FunctionType), update_function),\n    (lambda a, b: isinstance2(a, b, property), update_property),\n]\nUPDATE_RULES.extend(\n    [\n        (\n            lambda a, b: isinstance2(a, b, types.MethodType),\n            lambda a, b: update_function(a.__func__, b.__func__),",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "mod_attrs",
+        "kind": 5,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "peekOfCode": "mod_attrs = [\n    \"__name__\",\n    \"__doc__\",\n    \"__package__\",\n    \"__loader__\",\n    \"__spec__\",\n    \"__file__\",\n    \"__cached__\",\n    \"__builtins__\",\n]",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.autoreload",
+        "documentation": {}
+    },
+    {
+        "label": "StoreMagics",
+        "kind": 6,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "peekOfCode": "class StoreMagics(Magics):\n    \"\"\"Lightweight persistence for python variables.\n    Provides the %store magic.\"\"\"\n    autorestore = Bool(False, help=\n        \"\"\"If True, any %store-d variables will be automatically restored\n        when IPython starts.\n        \"\"\"\n    ).tag(config=True)\n    def __init__(self, shell):\n        super(StoreMagics, self).__init__(shell=shell)",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "restore_aliases",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "peekOfCode": "def restore_aliases(ip, alias=None):\n    staliases = ip.db.get('stored_aliases', {})\n    if alias is None:\n        for k,v in staliases.items():\n            #print \"restore alias\",k,v # dbg\n            #self.alias_table[k] = v\n            ip.alias_manager.define_alias(k,v)\n    else:\n        ip.alias_manager.define_alias(alias, staliases[alias])\ndef refresh_variables(ip):",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "refresh_variables",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "peekOfCode": "def refresh_variables(ip):\n    db = ip.db\n    for key in db.keys('autorestore/*'):\n        # strip autorestore\n        justkey = os.path.basename(key)\n        try:\n            obj = db[key]\n        except KeyError:\n            print(\"Unable to restore variable '%s', ignoring (use %%store -d to forget!)\" % justkey)\n            print(\"The error was:\", sys.exc_info()[0])",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "restore_dhist",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "peekOfCode": "def restore_dhist(ip):\n    ip.user_ns['_dh'] = ip.db.get('dhist',[])\ndef restore_data(ip):\n    refresh_variables(ip)\n    restore_aliases(ip)\n    restore_dhist(ip)\n@magics_class\nclass StoreMagics(Magics):\n    \"\"\"Lightweight persistence for python variables.\n    Provides the %store magic.\"\"\"",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "restore_data",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "peekOfCode": "def restore_data(ip):\n    refresh_variables(ip)\n    restore_aliases(ip)\n    restore_dhist(ip)\n@magics_class\nclass StoreMagics(Magics):\n    \"\"\"Lightweight persistence for python variables.\n    Provides the %store magic.\"\"\"\n    autorestore = Bool(False, help=\n        \"\"\"If True, any %store-d variables will be automatically restored",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "load_ipython_extension",
+        "kind": 2,
+        "importPath": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "description": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "peekOfCode": "def load_ipython_extension(ip):\n    \"\"\"Load the extension in IPython.\"\"\"\n    ip.register_magics(StoreMagics)",
+        "detail": "dist.main.app.Contents.Resources.IPython.extensions.storemagic",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "venv.bin.jp",
+        "description": "venv.bin.jp",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument('expression')\n    parser.add_argument('-f', '--filename',\n                        help=('The filename containing the input data.  '\n                              'If a filename is not given then data is '\n                              'read from stdin.'))\n    parser.add_argument('--ast', action='store_true',\n                        help=('Pretty print the AST, do not search the data.'))\n    args = parser.parse_args()",
+        "detail": "venv.bin.jp",
+        "documentation": {}
+    },
+    {
+        "label": "BridgeApi",
+        "kind": 6,
+        "importPath": "bridge",
+        "description": "bridge",
+        "peekOfCode": "class BridgeApi:\n    def __init__(self):\n        self.pacs = []\n        self.p_rks = []\n        self.authorized = False\n        self._req = requests.session()\n        self.ty = 1\n    def load_cookies(self):\n        if not os.path.exists(cookie_filepath):\n            return",
+        "detail": "bridge",
+        "documentation": {}
+    },
+    {
+        "label": "login_url",
+        "kind": 5,
+        "importPath": "bridge",
+        "description": "bridge",
+        "peekOfCode": "login_url = \"https://sipadu.or.id/home/login\"\nadd_anggota_url = \"https://sipadu.or.id/user/inanggota\"\nbasedir = os.path.dirname(__file__)\ncookie_filepath = os.path.join(basedir, \"cookies.pickle\")\nclass BridgeApi:\n    def __init__(self):\n        self.pacs = []\n        self.p_rks = []\n        self.authorized = False\n        self._req = requests.session()",
+        "detail": "bridge",
+        "documentation": {}
+    },
+    {
+        "label": "add_anggota_url",
+        "kind": 5,
+        "importPath": "bridge",
+        "description": "bridge",
+        "peekOfCode": "add_anggota_url = \"https://sipadu.or.id/user/inanggota\"\nbasedir = os.path.dirname(__file__)\ncookie_filepath = os.path.join(basedir, \"cookies.pickle\")\nclass BridgeApi:\n    def __init__(self):\n        self.pacs = []\n        self.p_rks = []\n        self.authorized = False\n        self._req = requests.session()\n        self.ty = 1",
+        "detail": "bridge",
+        "documentation": {}
+    },
+    {
+        "label": "basedir",
+        "kind": 5,
+        "importPath": "bridge",
+        "description": "bridge",
+        "peekOfCode": "basedir = os.path.dirname(__file__)\ncookie_filepath = os.path.join(basedir, \"cookies.pickle\")\nclass BridgeApi:\n    def __init__(self):\n        self.pacs = []\n        self.p_rks = []\n        self.authorized = False\n        self._req = requests.session()\n        self.ty = 1\n    def load_cookies(self):",
+        "detail": "bridge",
+        "documentation": {}
+    },
+    {
+        "label": "cookie_filepath",
+        "kind": 5,
+        "importPath": "bridge",
+        "description": "bridge",
+        "peekOfCode": "cookie_filepath = os.path.join(basedir, \"cookies.pickle\")\nclass BridgeApi:\n    def __init__(self):\n        self.pacs = []\n        self.p_rks = []\n        self.authorized = False\n        self._req = requests.session()\n        self.ty = 1\n    def load_cookies(self):\n        if not os.path.exists(cookie_filepath):",
+        "detail": "bridge",
+        "documentation": {}
+    },
+    {
+        "label": "App",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class App(QWidget):\n    def __init__(self, api: BridgeApi):\n        super().__init__()\n        self.api = api\n        self.parser = ExcelParser()\n        self.title = 'Sipadu Contonge'\n        self.left = 0\n        self.top = 0\n        self.width = 800\n        self.height = 600",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "ExcelParser",
+        "kind": 6,
+        "importPath": "parse_excel",
+        "description": "parse_excel",
+        "peekOfCode": "class ExcelParser:\n    def add_empty_row(self, table: QTableWidget) -> int:\n        r = table.rowCount()\n        table.setRowCount(r + 1)\n        st = QTableWidgetItem(\"WAITING\")\n        st.setFlags(Qt.ItemFlag.ItemIsEnabled)\n        table.setItem(r, 0, st)\n        table.item(r, 0).setBackground(QColor(\"#C5C5C5\"))\n        table.setCellWidget(r, 1, QComboBox())\n        table.setCellWidget(r, 2, QComboBox())",
+        "detail": "parse_excel",
+        "documentation": {}
+    },
+    {
+        "label": "TABLE_HEADERS",
+        "kind": 5,
+        "importPath": "table_headers",
+        "description": "table_headers",
+        "peekOfCode": "TABLE_HEADERS = ['STATUS', 'PAC', 'RANTING', 'NIK', 'NAMA', 'TEMPAT LAHIR', 'TANGGAL LAHIR', 'EMAIL', 'ALAMAT LENGKAP', 'AKTIF KEPENGURUSAN', 'JABATAN', 'PELATIHAN FORMAL', 'MAKESTA', 'PENYELENGGARA MAKESTA', 'TEMPAT MAKESTA', 'WAKTU MAKESTA', 'LAKMUD', 'PENYELENGGARA LAKMUD', 'TEMPAT LAKMUD', 'WAKTU LAKMUD', 'LAKUT', 'PENYELENGGARA LAKUT', 'TEMPAT LAKUT', 'WAKTU LAKUT', 'STATUS CBP', 'NAMA AYAH', 'NAMA IBU', 'PEND. TERAKHIR', 'PEND. SD', 'PEND. SMP', 'PEND. SMA', 'PEND. PT', 'PEND. NONFORMAL', 'NO HP', 'FB', 'IG', 'TWITTER', 'PILIH FOTO', 'FILE FOTO']",
+        "detail": "table_headers",
+        "documentation": {}
+    },
+    {
+        "label": "UploadThread",
+        "kind": 6,
+        "importPath": "utils",
+        "description": "utils",
+        "peekOfCode": "class UploadThread(QRunnable):\n    data_uploaded = pyqtSignal(object)\n    data_uploading = pyqtSignal(object)\n    def __init__(self, target, *args):\n        super().__init__()\n        self.target = target\n        self.args = args\n    def run(self):\n        self.target(*self.args)\nclass UploadWorker(QObject):",
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "UploadWorker",
+        "kind": 6,
+        "importPath": "utils",
+        "description": "utils",
+        "peekOfCode": "class UploadWorker(QObject):\n    data_uploaded = pyqtSignal(object)\n    data_uploading = pyqtSignal(object)\n    progress = pyqtSignal(int)\n    finished = pyqtSignal()\n    def __init__(self, api: BridgeApi, data):\n        super().__init__()\n        self.data = data\n        self.api = api\n    def run(self):",
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "ParserWorker",
+        "kind": 6,
+        "importPath": "utils",
+        "description": "utils",
+        "peekOfCode": "class ParserWorker(QObject):\n    finished = pyqtSignal()\n    def __init__(self, file_path, parser, table):\n        super().__init__()\n        self.file_path = file_path\n        self.parser = parser\n        self.table = table\n    def run(self):\n        self.parser.parse_file(self.file_path, self.table)\n        self.finished.emit()",
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "LoginWorker",
+        "kind": 6,
+        "importPath": "utils",
+        "description": "utils",
+        "peekOfCode": "class LoginWorker(QObject):\n    login_finished = pyqtSignal(object)\n    finished = pyqtSignal()\n    def __init__(self, api, username, password, ty):\n        super().__init__()\n        self.api = api\n        self.username = username\n        self.password = password\n        self.ty = ty\n    def run(self):",
+        "detail": "utils",
+        "documentation": {}
+    }
+]
