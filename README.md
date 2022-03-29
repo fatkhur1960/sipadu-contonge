@@ -5,7 +5,7 @@ Sipadu Contonge merupakan sebuah alat untuk mempermudah para pengurus PC/PAC IPN
 ### Cara Menjalankan
 1. Download `Sipadu_Contonge-Installer` di [sini](https://github.com/fatkhur1960/sipadu-contonge/releases/)
 2. Buka file `Sipadu_Contonge-Installer`, Klik Install. Lalu ikuti prosesnya sampai selesai
-3. Setelah proses instalasi selesai selanjutnya masukkan `username` dan `password`. Pastikan username dan password yang dimasukkan sudah benar, lalu klik tombol `Masuk`
+3. Setelah proses instalasi selesai selanjutnya buka aplikasi `Sipadu Contonge` lalu masukkan `username` dan `password`. Pastikan username dan password yang dimasukkan sudah benar, lalu klik tombol `Masuk`
 4. Lalu pilih file excel yang sudah siap untuk diupload. Untuk template file excelnya bisa di download [IPNU](https://github.com/fatkhur1960/sipadu-contonge/raw/master/template/IPNU-Anggota-Nama_PAC-Nama_Ranting_Komsat.xlsx) dan [IPPNU](https://github.com/fatkhur1960/sipadu-contonge/raw/master/template/IPPNU-Anggota-Nama_PAC-Nama_Ranting_Komsat.xlsx). Pastikan untuk penamaan file, sesuaikan dengan format yang sudah tertera. `Contoh: IPNU-Anggota-Garung-Topengan.xlsx atau IPPNU-Anggota-Garung-Topengan.xlsx`
 5. *IMPORTANT!!!* Setelah berhasil mengimport data anggota dari file excel, selanjutnya sesuaikan untuk Pimpinan Anak Cabang dan Ranting/Komisariatnya. Sesuai dengan nama file yang diimport.
 6. _(Opsional)_ Bagi data anggota ranting yang sudah ada fotonya bisa dipilih satu-persatu sesuai nama anggota.
