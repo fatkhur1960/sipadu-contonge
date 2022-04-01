@@ -8,3 +8,6 @@ __pycache__
 template/.DS_Store
 **/.DS_Store
 .DS_Store
+.vscode
+test-server
+*.pickle

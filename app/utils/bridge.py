@@ -1,16 +1,16 @@
+import traceback
 import requests
 import warnings
 import pickle
 import os
 from lxml import html
 from datetime import datetime
+import env
 
 warnings.filterwarnings('ignore')
 
 login_url = "https://sipadu.or.id/home/login"
 add_anggota_url = "https://sipadu.or.id/user/inanggota"
-basedir = os.path.dirname(__file__)
-cookie_filepath = os.path.join(basedir, "cookies.pickle")
 
 
 class BridgeApi:
@@ -22,10 +22,10 @@ class BridgeApi:
         self.ty = 1
 
     def load_cookies(self):
-        if not os.path.exists(cookie_filepath):
+        if not os.path.exists(env.cookie_filepath):
             return
 
-        with open(cookie_filepath, 'rb') as f:
+        with open(env.cookie_filepath, 'rb') as f:
             cookies = pickle.load(f)
             self._req.cookies.update(cookies)
 
@@ -39,7 +39,7 @@ class BridgeApi:
             self.after_login()
 
     def save_cookies(self):
-        with open(cookie_filepath, 'wb') as f:
+        with open(env.cookie_filepath, 'wb') as f:
             pickle.dump(self._req.cookies, f)
 
     def login(self, username: str, password: str, ty: int):
@@ -69,7 +69,8 @@ class BridgeApi:
         self.pacs.clear()
         self.p_rks.clear()
         self._req.close()
-        # os.remove(cookie_filepath)
+        if os.path.exists(env.cookie_filepath):
+            os.remove(env.cookie_filepath)
 
     def merge(self, list1, list2):
         merged_list = tuple(zip(list1, list2))
@@ -93,7 +94,7 @@ class BridgeApi:
         for s in selects:
             if s.name == 'id_pimpinan':
                 id_pc = s.value
-                
+
             if s.name == 'id_pimpinan_ac':
                 id_pac = s.value
 
@@ -128,15 +129,18 @@ class BridgeApi:
             else:
                 url = self.form.base_url
 
+            # url = "http://localhost:3000/inanggota"
+
             payload = {}
             for k, v in data.items():
-                self.form.fields[k] = v
+                if k != "status":
+                    self.form.fields[k] = v
 
             for k, v in self.form.form_values():
                 payload[k] = v
 
-            if payload['foto'] != '' or payload['foto'] != None:
-                with open(payload['foto'], "rb") as foto:
+            if data['foto'] != '' or data['foto'] != None and os.path.exists(data['foto']):
+                with open(data['foto'], "rb") as foto:
                     result = self._req.post(
                         url, data=payload, verify=False, files={'foto': foto})
             else:
@@ -144,7 +148,8 @@ class BridgeApi:
 
             print('Upload Result:', result.status_code)
 
-            return True
+            return result.status_code == 200
         except Exception as e:
-            print('Got Error:', e)
+            err = ''.join(traceback.format_exception(None, e, e.__traceback__))
+            print('Got Error:', err)
             return False

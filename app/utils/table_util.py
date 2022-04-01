@@ -6,8 +6,8 @@ from PyQt5.QtCore import Qt
 from datetime import datetime
 
 
-class ExcelParser:
-    def add_empty_row(self, table: QTableWidget) -> int:
+class TableUtil:
+    def addEmptyRow(self, table: QTableWidget) -> int:
         r = table.rowCount()
         table.setRowCount(r + 1)
 
@@ -103,15 +103,19 @@ class ExcelParser:
         st.setFlags(Qt.ItemFlag.ItemIsEnabled)
         table.setItem(r, 37, st)
         table.setColumnWidth(37, 250)
-        
+
         fileBtn = QPushButton("Pilih Foto", table)
         fileBtn.clicked.connect(
-            lambda r=r, table=table: self.select_file(r, table))
+            lambda r=r, table=table: self._selectFile(r, table))
         table.setCellWidget(r, 38, fileBtn)
 
         return r
 
-    def parse_file(self, file_path: str, table: QTableWidget,):
+    def removeRow(self, table: QTableWidget):
+        r = table.currentRow()
+        table.removeRow(r)
+
+    def parseFile(self, file_path: str, table: QTableWidget,):
         df = pd.read_excel(file_path)
         df.fillna("", inplace=True)
         df = df.astype(str)
@@ -132,14 +136,15 @@ class ExcelParser:
             st = QTableWidgetItem("")
             st.setFlags(Qt.ItemFlag.ItemIsEnabled)
             table.setItem(r, 37, st)
-            
+
             fileBtn = QPushButton("Pilih Foto", table)
             fileBtn.clicked.connect(
-                lambda r=r, table=table: self.select_file(r, table))
+                lambda r=r, table=table: self._selectFile(r, table))
             table.setCellWidget(r, 38, fileBtn)
+            table.setColumnHidden(38, True)
 
             for c, value in enumerate(rows):
-                is_date, output = self.extract_date(value)
+                is_date, output = self._extractDate(value)
                 if is_date or c == 20:
                     dp = QDateEdit(calendarPopup=True)
                     if isinstance(output, (datetime)):
@@ -209,18 +214,23 @@ class ExcelParser:
                     table.setCellWidget(r, c+3, pnd)
                 else:
                     table.setItem(r, c+3, QTableWidgetItem(value))
+                    
+            for col in [16, 20]:
+                target = table.cellWidget(r, col)
+                dp = table.cellWidget(r, col+3)
+                dp.setDisabled(target.currentIndex() == 1)
+                target.currentIndexChanged.connect(lambda idx, dp=dp: dp.setDisabled(idx == 1))
 
-    def extract_date(self, input):
+    def _extractDate(self, input):
         try:
             return True, datetime.strptime(input, '%Y-%m-%d')
         except:
             return False, input
 
-    def select_file(self, r, table):
+    def _selectFile(self, r, table):
         options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
         self.file_path, _ = QFileDialog.getOpenFileName(
-            table, "Pilih Foto Anggota", "", "Image File (*.jpg)", options=options)
+            table, "Pilih Foto Anggota", "", "Image File (*.jpg)")
 
         if self.file_path:
             table.item(r, 37).setText(self.file_path)
