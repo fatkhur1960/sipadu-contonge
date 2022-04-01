@@ -1,5 +1,7 @@
 import os
+import stat
 from PyQt5.QtCore import QRunnable, pyqtSignal, QObject
+from app.utils import path_locator
 
 from app.utils.bridge import BridgeApi
 from app.utils.photo_cropper import PhotoCropper
@@ -31,13 +33,15 @@ class ImportPhotoWorker(QObject):
 
     def run(self):
         cropper = PhotoCropper()
-        cropped_dir = os.path.join(self.photos_dir, 'cropped')
+        cropped_dir = path_locator.module_path('cropped')
         obj = os.scandir(self.photos_dir)
         files = []
 
         isExist = os.path.exists(cropped_dir)
         if not isExist:
             os.makedirs(cropped_dir)
+            st = os.stat(cropped_dir)
+            os.chmod(cropped_dir, st.st_mode | stat.S_IREAD | stat.S_IWRITE)
 
         for entry in obj:
             if entry.is_file() and entry.name.lower().endswith('.jpg'):
