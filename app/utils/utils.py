@@ -94,7 +94,7 @@ class UploadWorker(QObject):
             if res:
                 self.data_uploaded.emit((i, "#087f23", "UPLOADED"))
             else:
-                self.data_not_uploaded.emit((i, "#ba000d", "FAILED"))
+                self.data_not_uploaded.emit((i, "#b71c1c", "FAILED"))
             self.progress.emit((i + 1)/data_count*100)
 
         self.finished.emit()

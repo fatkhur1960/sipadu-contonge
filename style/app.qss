@@ -1,0 +1,120 @@
+QDateEdit {
+    border: none;
+    border-bottom: 2px solid #00bcd4;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+QDateEdit::drop-down {
+    border: none;
+    color: #00bcd4;
+    width: 20px;
+    height: 15px;
+    image: url(icon:/primary/downarrow.svg);
+}
+
+QGroupBox {
+    padding: 0px;
+    padding-top: 30px;
+}
+
+.primary-btn {
+    background-color: #006978;
+    color: #ffffff;
+    border-color: #006978;
+}
+
+.primary-btn:disabled {
+    opacity: 0.7;
+    background-color: #0097a7;
+    color: #dedede;
+    border-color: #0097a7;
+}
+
+.primary-btn:focus {
+    opacity: 0.7;
+    background-color: #006978;
+    color: #ffffff;
+    border-color: #006978;
+}
+
+.secondary-btn {
+    background-color: #004ba0;
+    color: #ffffff;
+    border-color: #004ba0;
+}
+
+.secondary-btn:focus {
+    background-color: #0d47a1;
+    color: #ffffff;
+    border-color: #0d47a1;
+}
+
+.secondary-btn:disabled {
+    background-color: #1976d2;
+    color: #dedede;
+    border-color: #1976d2;
+}
+
+.danger-btn {
+    background-color: #b71c1c;
+    color: #ffffff;
+    border-color: #b71c1c;
+}
+
+.danger-btn:focus {
+    background-color: #9a0007;
+    color: #ffffff;
+    border-color: #9a0007;
+}
+
+.danger-btn:disabled {
+    background-color: #e53935;
+    color: #dedede;
+    border-color: #e53935;
+}
+
+.validation-error {
+    background-color: #b71c1c;
+    color: #ffffff;
+    border-color: #b71c1c;
+}
+
+QScrollBar:horizontal {
+    border: 0;
+    background: #0097a7;
+    height: 12px;
+}
+
+QScrollBar:vertical {
+    border: 0;
+    background: #0097a7;
+    width: 12px;
+}
+
+QScrollBar::handle {
+    background: {{#0097a7|opacity(0.4)}};
+}
+
+QScrollBar::handle:horizontal {
+    min-width: 24px;
+}
+
+QScrollBar::handle:vertical {
+    min-height: 24px;
+}
+
+QScrollBar::handle:vertical:hover,
+QScrollBar::handle:horizontal:hover {
+    background: #0097a7;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    border: 0;
+    background: transparent;
+    width: 0px;
+    height: 0px;
+}
