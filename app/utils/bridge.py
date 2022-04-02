@@ -9,11 +9,9 @@ import env
 
 warnings.filterwarnings('ignore')
 
-login_url = "https://sipadu.or.id/home/login"
-add_anggota_url = "https://sipadu.or.id/user/inanggota"
-
 
 class BridgeApi:
+
     def __init__(self):
         self.pacs = []
         self.p_rks = []
@@ -44,10 +42,10 @@ class BridgeApi:
 
     def login(self, username: str, password: str, ty: int):
         resp = self._req.post(
-            login_url,
+            env.login_url,
             data={
-                "username": username,
-                "password": password,
+                "username": username.strip(),
+                "password": password.strip(),
                 "kategori_user": ty
             },
             verify=False,
@@ -77,9 +75,9 @@ class BridgeApi:
         return merged_list
 
     def after_login(self):
-        # self.save_cookies()
-        result = self._req.get(
-            add_anggota_url, verify=False)
+        if env.app_debug:
+            self.save_cookies()
+        result = self._req.get(env.add_anggota_url, verify=False)
 
         tree = html.fromstring(result.text)
         self.form = tree.xpath("//form[@id='quickForm']")[0]
@@ -129,7 +127,8 @@ class BridgeApi:
             else:
                 url = self.form.base_url
 
-            # url = "http://localhost:3000/inanggota"
+            if env.app_debug:
+                url = env.test_url
 
             payload = {}
             for k, v in data.items():

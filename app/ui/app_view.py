@@ -42,8 +42,10 @@ class AppView(QWidget):
         hLayout.addWidget(self.formWidget2, 1)
 
         self.pbar = QProgressBar(self)
+        self.pbar.setFixedHeight(25)
         self.pbar.setGeometry(30, 40, 200, 25)
         self.pbar.setVisible(False)
+        self.pbar.setTextVisible(True)
 
         self.addRowBtn = QPushButton("Tambahkan Row", self)
         self.addRowBtn.setGeometry(30, 40, 200, 25)
@@ -52,17 +54,17 @@ class AppView(QWidget):
         self.removeRowBtn = QPushButton("Hapus Row", self)
         self.removeRowBtn.setGeometry(30, 40, 200, 25)
         self.removeRowBtn.clicked.connect(self.removeTableRow)
-        self.removeRowBtn.setStyleSheet("background-color: red")
+        self.removeRowBtn.setProperty('class', 'danger-btn')
 
-        self.btnUpload = QPushButton('Upload Anggota', self)
-        self.btnUpload.setVisible(False)
-        self.btnUpload.setStyleSheet("background-color: #006978")
-        self.btnUpload.clicked.connect(self.uploadAnggota)
+        self.uploadBtn = QPushButton('Upload Anggota', self)
+        self.uploadBtn.setVisible(False)
+        self.uploadBtn.setProperty('class', 'primary-btn')
+        self.uploadBtn.clicked.connect(self.uploadAnggota)
 
         self.groupBtn = QHBoxLayout()
         self.groupBtn.addWidget(self.addRowBtn)
         self.groupBtn.addWidget(self.removeRowBtn)
-        self.groupBtn.addWidget(self.btnUpload)
+        self.groupBtn.addWidget(self.uploadBtn)
         # self.addRowBtn.setVisible(False)
 
         self.addRowBtn.setDisabled(True)
@@ -91,7 +93,7 @@ class AppView(QWidget):
             self.password.setEnabled(False)
             self.org.setEnabled(False)
             self.loginBtn.setText("Log Out")
-            self.loginBtn.setStyleSheet("background-color: red")
+            self.loginBtn.setProperty('class', 'danger-btn')
             self.loginBtn.clicked.disconnect(self.onLogin)
             self.loginBtn.clicked.connect(self.logout)
             self.doAfterLogin()
@@ -136,11 +138,18 @@ class AppView(QWidget):
         form.addWidget(orgLabel)
         form.addWidget(self.org)
 
-        self.loginBtn = QPushButton('Masuk', self)
+        self.loginBtn = QPushButton('Login', self)
         self.loginBtn.move(20, 80)
-        self.loginBtn.setStyleSheet("background-color: #006978")
+        self.loginBtn.setProperty('class', 'primary-btn')
         form.addWidget(self.loginBtn)
         self.loginBtn.clicked.connect(self.onLogin)
+        
+        self.logoutBtn = QPushButton('Logout', self)
+        self.logoutBtn.move(20, 80)
+        self.logoutBtn.setProperty('class', 'danger-btn')
+        self.logoutBtn.setVisible(False)
+        form.addWidget(self.logoutBtn)
+        self.logoutBtn.clicked.connect(self.logout)
 
     def createInfoForm(self):
         self.formWidget2 = QGroupBox("Kepengurusan")
@@ -166,7 +175,7 @@ class AppView(QWidget):
 
         self.file = QPushButton('Import File Excel', self)
         self.file.move(20, 80)
-        self.file.setStyleSheet("background-color: #004ba0")
+        self.file.setProperty('class', 'secondary-btn')
         fileLabel = QLabel("Data Anggota", self)
         fileLabel.setBuddy(self.file)
         form.addWidget(fileLabel)
@@ -178,7 +187,7 @@ class AppView(QWidget):
         self.importPFolderBtn = QPushButton("Import Foto", self)
         self.importPFolderBtn.setGeometry(30, 40, 200, 25)
         self.importPFolderBtn.clicked.connect(self.importPFolder)
-        self.importPFolderBtn.setStyleSheet("background-color: #006978")
+        self.importPFolderBtn.setProperty('class', 'primary-btn')
         self.importPFolderBtn.setVisible(False)
         form.addWidget(self.importPFolderBtn)
 
@@ -192,8 +201,9 @@ class AppView(QWidget):
         self.tableWidget = QTableWidget()
         self.tableWidget.setColumnCount(len(TABLE_HEADERS))
         self.tableWidget.setHorizontalHeaderLabels(TABLE_HEADERS)
-        self.tableWidget.horizontalHeader().setSectionResizeMode(
-            QHeaderView.ResizeToContents)
+        self.tableWidget.setColumnHidden(38, True)
+        for i in range(1, 38):
+            self.tableWidget.setColumnWidth(i, 150)
 
     def selectFile(self):
         self.file_path, _ = QFileDialog.getOpenFileName(
@@ -203,7 +213,7 @@ class AppView(QWidget):
             self.formWidget2.setDisabled(True)
             self.tableUtil.parseFile(self.file_path, self.tableWidget)
             self.formWidget2.setDisabled(False)
-            self.btnUpload.setVisible(True)
+            self.uploadBtn.setVisible(True)
             self.fillTableData()
 
     def fillTableData(self):
@@ -226,7 +236,7 @@ class AppView(QWidget):
 
         self.populateData()
         self.setDisabledGroupCmb(False)
-        self.btnUpload.setVisible(True)
+        self.uploadBtn.setVisible(True)
         self.importPFolderBtn.setVisible(True)
         self.enableCrop.setHidden(False)
 
@@ -265,6 +275,8 @@ class AppView(QWidget):
         self.loginBtn.setDisabled(True)
         username = self.username.text()
         password = self.password.text()
+        self.username.setEnabled(False)
+        self.password.setEnabled(False)
         if self.org.currentText() == 'IPPNU':
             ty = 0
         else:
@@ -282,26 +294,21 @@ class AppView(QWidget):
         self.thread.start()
 
     def onLoginFinished(self, result):
-        msg = QMessageBox()
         status, msg_text = result
 
         if status:
-            self.username.setEnabled(False)
-            self.password.setEnabled(False)
             self.org.setEnabled(False)
-            self.loginBtn.setText("Log Out")
-            self.loginBtn.setStyleSheet("background-color: red")
-            self.loginBtn.clicked.disconnect(self.onLogin)
-            self.loginBtn.clicked.connect(self.logout)
+            self.loginBtn.setVisible(False)
+            self.logoutBtn.setVisible(True)
             self.doAfterLogin()
-            self.loginBtn.setDisabled(False)
         else:
-            self.loginBtn.setDisabled(False)
-
+            self.username.setEnabled(True)
+            self.password.setEnabled(True)
+        
+        self.loginBtn.setDisabled(False)
         self.formWidget2.setDisabled(not status)
 
-        msg.setText(msg_text)
-        msg.exec_()
+        self.showMessage(msg_text)
 
     def doAfterLogin(self):
         # set Pac Values
@@ -335,16 +342,14 @@ class AppView(QWidget):
         self.username.setEnabled(True)
         self.password.setEnabled(True)
         self.org.setEnabled(True)
-        self.loginBtn.setText("Masuk")
-        self.loginBtn.setStyleSheet("background-color: #006978")
-        self.loginBtn.clicked.disconnect(self.logout)
-        self.loginBtn.clicked.connect(self.onLogin)
+        self.logoutBtn.setVisible(False)
+        self.loginBtn.setVisible(True)
         self.formWidget2.setDisabled(True)
-        self.btnUpload.setVisible(False)
+        self.uploadBtn.setVisible(False)
         self.bridge.logout()
 
     def setDisabledGroupBtn(self, state: bool):
-        self.btnUpload.setDisabled(state)
+        self.uploadBtn.setDisabled(state)
         self.addRowBtn.setDisabled(state)
         self.removeRowBtn.setDisabled(state)
         self.loginBtn.setDisabled(state)
@@ -361,18 +366,18 @@ class AppView(QWidget):
             rk = self.tableWidget.cellWidget(r, 2)
 
             if ac.currentIndex() == 0:
-                ac.setStyleSheet('QComboBox{background-color: red}')
-                self.btnUpload.setDisabled(True)
+                ac.setStyleSheet('QComboBox{background-color: #ff8a80; color: #ffffff; border-color: #b71c1c;}')
+                self.uploadBtn.setDisabled(True)
             else:
                 ac.setStyleSheet('')
-                self.btnUpload.setDisabled(False)
+                self.uploadBtn.setDisabled(False)
 
             if rk.currentText() == "" or rk.currentIndex() == 0:
-                rk.setStyleSheet('QComboBox{background-color: red}')
-                self.btnUpload.setDisabled(True)
+                rk.setStyleSheet('QComboBox{background-color: #ff8a80; color: #ffffff; border-color: #b71c1c;}')
+                self.uploadBtn.setDisabled(True)
             else:
                 rk.setStyleSheet('')
-                self.btnUpload.setDisabled(False)
+                self.uploadBtn.setDisabled(False)
 
             srk = rk.currentText()
             items["status"] = self.tableWidget.item(r, 0).text()
@@ -466,7 +471,7 @@ class AppView(QWidget):
         self.thread.finished.connect(lambda: self.pbar.setVisible(False))
         self.thread.finished.connect(lambda: self.pbar.setValue(0))
         self.thread.finished.connect(
-            lambda: self.showMessage("Anggota berhasil diupload"))
+            lambda: self.showMessage("Anggota selesai diupload"))
         self.thread.finished.connect(lambda: self.setDisabledGroupBtn(False))
         self.thread.start()
 
@@ -480,9 +485,6 @@ class AppView(QWidget):
         target = self.tableWidget.item(i, 0)
         target.setBackground(QColor(color))
         target.setText(text)
-        # time.sleep(0.8)
-        # self.payloads.pop(i)
-        # self.tableWidget.removeRow(i)
 
     def onAnggotaNotUploaded(self, result):
         i, color, text = result
@@ -553,7 +555,8 @@ class AppView(QWidget):
     def addTableRow(self):
         r = self.tableUtil.addEmptyRow(self.tableWidget)
         self.fillTablePacItems(r)
-        self.btnUpload.setVisible(True)
+        self.uploadBtn.setVisible(True)
+        self.populateData()
 
     def removeTableRow(self):
         self.tableUtil.removeRow(self.tableWidget)

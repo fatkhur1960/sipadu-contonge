@@ -2,11 +2,10 @@ from __future__ import print_function
 from __future__ import division
 
 import cv2
-import argparse
-import os
 import math
+import os
+import path_locator
 
-# Algorithm parameters
 COMBINE_FACE_WEIGHT = 10
 COMBINE_FEATURE_WEIGHT = 10
 FEATURE_DETECT_MAX_CORNERS = 50
@@ -15,11 +14,16 @@ FEATURE_DETECT_MIN_DISTANCE = 10
 FACE_DETECT_REJECT_LEVELS = 1.3
 FACE_DETECT_LEVEL_WEIGHTS = 5
 
-cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
+# cascade_path = os.path.join(cv2.data.haarcascades, 'haarcascade_frontalface_default.xml')
+cascade_path = os.path.join(os.getcwd(), 'data', 'haarcascade_frontalface_default.xml')
+cascade_path = path_locator.module_path(cascade_path).absolute()
 
 
 def center_from_faces(matrix):
-    face_cascade = cv2.CascadeClassifier(cascade_path)
+    if not os.path.exists(cascade_path):
+        print('cascade file doesn\'t exists', str(cascade_path))
+        
+    face_cascade = cv2.CascadeClassifier(str(cascade_path))
     faces = face_cascade.detectMultiScale(matrix, FACE_DETECT_REJECT_LEVELS, FACE_DETECT_LEVEL_WEIGHTS)
 
     x, y = (0, 0)
@@ -166,21 +170,3 @@ def smart_crop(image, target_width, target_height, destination, do_resize):
 
     cropped = original[int(crop_pos['top']): int(crop_pos['bottom']), int(crop_pos['left']): int(crop_pos['right'])]
     cv2.imwrite(destination, cropped)
-
-
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-W", "--width", required=True, help="Target width")
-    ap.add_argument("-H", "--height", required=True, help="Target height")
-    ap.add_argument("-i", "--image", required=True, help="Image to crop")
-    ap.add_argument("-o", "--output", required=True, help="Output")
-    ap.add_argument("-n", "--no-resize", required=False, default=False, action="store_true",
-                    help="Don't resize image before treating it")
-
-    args = vars(ap.parse_args())
-
-    smart_crop(args["image"], args["width"], args["height"], args["output"], not args["no_resize"])
-
-
-if __name__ == '__main__':
-    main()
