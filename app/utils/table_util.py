@@ -13,8 +13,9 @@ class TableUtil:
 
         st = QTableWidgetItem("WAITING")
         st.setFlags(Qt.ItemFlag.ItemIsEnabled)
+        st.setData(QColor("#C5C5C5"))
+        st.setTextAlignment(Qt.AlignCenter)
         table.setItem(r, 0, st)
-        table.item(r, 0).setBackground(QColor("#C5C5C5"))
         table.setCellWidget(r, 1, QComboBox())
         table.setCellWidget(r, 2, QComboBox())
 
@@ -127,15 +128,17 @@ class TableUtil:
 
         for r, rows in enumerate(data):
             st = QTableWidgetItem("WAITING")
+            st.setToolTip("Upload Status")
+            st.setBackground(QColor("#C5C5C5"))
             st.setFlags(Qt.ItemFlag.ItemIsEnabled)
+            st.setTextAlignment(Qt.AlignCenter)
             table.setItem(r, 0, st)
-            table.item(r, 0).setBackground(QColor("#C5C5C5"))
             table.setCellWidget(r, 1, QComboBox())
             table.setCellWidget(r, 2, QComboBox())
 
-            st = QTableWidgetItem("")
-            st.setFlags(Qt.ItemFlag.ItemIsEnabled)
-            table.setItem(r, 37, st)
+            file_str = QTableWidgetItem("")
+            file_str.setFlags(Qt.ItemFlag.ItemIsEnabled)
+            table.setItem(r, 37, file_str)
 
             fileBtn = QPushButton("Pilih Foto", table)
             fileBtn.clicked.connect(

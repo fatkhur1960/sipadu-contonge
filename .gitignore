@@ -11,3 +11,4 @@ template/.DS_Store
 .vscode
 test-server
 *.pickle
+.qt_for_python
