@@ -1,4 +1,3 @@
-import time
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt, QThread
 from PyQt5.QtGui import QColor
@@ -8,6 +7,7 @@ from app.utils.photo_cropper import PhotoCropper
 from app.utils.table_util import TableUtil
 from app.utils.table_headers import TABLE_HEADERS
 from app.utils.utils import ImportPhotoWorker, LoginWorker, UploadWorker
+import env
 
 
 class AppView(QWidget):
@@ -18,6 +18,9 @@ class AppView(QWidget):
         self.cropper = PhotoCropper()
 
         self.title = 'Sipadu Contonge'
+        if env.app_debug:
+            self.title = '[Debug] Sipadu Contonge'
+            
         self.left = 0
         self.top = 0
         self.width = 800
@@ -382,7 +385,7 @@ class AppView(QWidget):
             srk = rk.currentText()
             items["status"] = self.tableWidget.item(r, 0).text()
             items["nik"] = self.tableWidget.item(r, 3).text()
-            items["nama"] = self.tableWidget.item(r, 4).text()
+            items["nama"] = self.tableWidget.item(r, 4).text().upper()
             items["tempat_lahir"] = self.tableWidget.item(r, 5).text()
             items["tanggal_lahir"] = self.tableWidget.cellWidget(
                 r, 6).date().toString("yyyy-MM-dd")

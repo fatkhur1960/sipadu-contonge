@@ -5,7 +5,6 @@ from PyQt5.QtGui import QIcon
 from qt_material import apply_stylesheet
 
 from app.ui.app_view import AppView
-import env
 
 try:
     from ctypes import windll
@@ -15,9 +14,7 @@ except ImportError:
     pass
 
 if __name__ == '__main__':
-    print("Debug mode:", env.app_debug)
     app = QApplication(sys.argv)
-    
     apply_stylesheet(app, theme='light_cyan_500.xml', extra={'density_scale': '-1', 'font_family': 'Roboto'})
     with open('style/app.qss', 'r') as style:
         styleSheet = app.styleSheet()

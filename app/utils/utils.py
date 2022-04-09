@@ -1,7 +1,6 @@
 import os
 import stat
 from PyQt5.QtCore import QRunnable, pyqtSignal, QObject
-from app.utils import path_locator
 
 from app.utils.bridge import BridgeApi
 from app.utils.photo_cropper import PhotoCropper
@@ -33,7 +32,7 @@ class ImportPhotoWorker(QObject):
 
     def run(self):
         cropper = PhotoCropper()
-        cropped_dir = path_locator.module_path('cropped')
+        cropped_dir = os.path.join(self.photos_dir, 'cropped')
         obj = os.scandir(self.photos_dir)
         files = []
 
