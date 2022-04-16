@@ -5,6 +5,7 @@ import pickle
 import os
 from lxml import html
 from datetime import datetime
+from urllib.parse import urlparse
 import env
 
 warnings.filterwarnings('ignore')
@@ -18,6 +19,7 @@ class BridgeApi:
         self.authorized = False
         self._req = requests.session()
         self.ty = 1
+        self.redirect_urls = ['/user/inanggota', '/user/addanggotaippnu', '/user/addanggotaipnu']
 
     def load_cookies(self):
         if not os.path.exists(env.cookie_filepath):
@@ -51,6 +53,8 @@ class BridgeApi:
             verify=False,
         )
 
+        self.username = username
+        self.password = password
         self.ty = ty
 
         tree = html.fromstring(resp.text)
@@ -132,7 +136,16 @@ class BridgeApi:
 
             payload = {}
             for k, v in data.items():
-                if k != "status":
+                if k == "status":
+                    continue
+                elif k == 'jabatan' and self.ty == 0:
+                    continue
+
+                if k == 'aktif_kepengurusan' and v == 'Anggota':
+                    self.form.fields[k] = 'PR'
+                elif k == 'pendidikan_terakhir' and v == 'SD/Sederajat':
+                    self.form.fields[k] = 'SMP/Sederajat'
+                else:
                     self.form.fields[k] = v
 
             for k, v in self.form.form_values():
@@ -145,10 +158,13 @@ class BridgeApi:
             else:
                 result = self._req.post(url, data=payload, verify=False)
 
-            print('Upload Result:', result.status_code)
-
-            return result.status_code == 200
+            print('[{}] Upload Result:'.format(
+                payload['nik']), result.status_code)
+            print('[{}] *'.format(payload['nik']), result.url)
+            result_path = urlparse(result.url).path
+            
+            return (result.status_code == 200, result_path in self.redirect_urls)
         except Exception as e:
             err = ''.join(traceback.format_exception(None, e, e.__traceback__))
             print('Got Error:', err)
-            return False
+            return (False, False)

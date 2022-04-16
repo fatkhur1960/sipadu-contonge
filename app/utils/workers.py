@@ -4,6 +4,7 @@ from PyQt5.QtCore import QRunnable, pyqtSignal, QObject
 
 from app.utils.bridge import BridgeApi
 from app.utils.photo_cropper import PhotoCropper
+from app.utils.table_headers import EXCEL_HEADERS
 
 
 class UploadThread(QRunnable):
@@ -17,6 +18,46 @@ class UploadThread(QRunnable):
 
     def run(self):
         self.target(*self.args)
+
+
+class ImportExcelWorker(QObject):
+    finished = pyqtSignal()
+    data_loaded = pyqtSignal(object)
+    data_load_failed = pyqtSignal(str)
+    data_length_loaded = pyqtSignal(int)
+    progress = pyqtSignal(int)
+
+    def __init__(self, file_path):
+        super().__init__()
+        self.file_path = file_path
+
+    def run(self):
+        import pandas as pd
+        import json
+
+        dataframe = pd.read_excel(self.file_path)
+        df = dataframe[dataframe['Makesta'] == 'sudah'] 
+        # verify excel file columns header
+        imported_headers = list(df.columns)
+        imported_headers[21] = "Cbp/Kpp"
+        if imported_headers != EXCEL_HEADERS:
+            self.data_load_failed.emit("Format file excel tidak valid")
+            return
+        
+        df.fillna("", inplace=True)
+        df = df.astype(str)
+        result = df.to_json(orient="table")
+        parsed = json.loads(result)
+        data = [list([x for x in i.values()][1:]) for i in parsed['data']]
+
+        data_length = len(data)
+        self.data_length_loaded.emit(data_length)
+
+        for r, rows in enumerate(data):
+            self.data_loaded.emit((r, rows))
+            self.progress.emit((r + 1)/data_length*100)
+            
+        self.finished.emit()
 
 
 class ImportPhotoWorker(QObject):
@@ -93,9 +134,11 @@ class UploadWorker(QObject):
                 continue
 
             self.data_uploading.emit((i, "#c8b900", "UPLOADING"))
-            res = self.api.upload(d)
-            if res:
+            uploaded, skipped = self.api.upload(d)
+            if uploaded and not skipped:
                 self.data_uploaded.emit((i, "#087f23", "UPLOADED"))
+            elif uploaded and skipped:
+                self.data_uploaded.emit((i, "#f57f17", "EXIST"))
             else:
                 self.data_not_uploaded.emit((i, "#b71c1c", "FAILED"))
             self.progress.emit((i + 1)/data_count*100)

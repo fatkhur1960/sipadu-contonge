@@ -4,6 +4,9 @@ default: prepare
 prepare:
 	pyinstaller --windowed --icon=icon.ico --add-data="icon.ico:." --add-data="data/haarcascade_frontalface_default.xml:data" --add-data="style/app.qss:style" -n "Sipadu Contonge" main.py --noconfirm
 
+win-prepare:
+	pyinstaller --windowed --icon=icon.ico --add-data="icon.ico;." --add-data="data/haarcascade_frontalface_default.xml;data" --add-data="style/app.qss;style" -n "Sipadu Contonge" main.py --noconfirm
+
 app-debug:
 	pyinstaller --console --icon=icon.ico --add-data="icon.ico:." --add-data="data/haarcascade_frontalface_default.xml:data" --add-data="style/app.qss:style" -n "Sipadu Contonge" main.py --noconfirm
 
@@ -12,6 +15,8 @@ app-onefile:
 
 app-build:
 	pyinstaller "Sipadu Contonge.spec" --noconfirm
+
+build-win: win-prepare app-build
 
 
 clean:

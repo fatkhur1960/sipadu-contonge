@@ -52,8 +52,8 @@ Sipadu Contonge merupakan sebuah alat untuk mempermudah para pengurus PC/PAC IPN
     ```
 
 ### Todo List
-- [ ] Make threaded on import excel file 
-- [ ] Make photo's file can changeable per-row
+- [x] Make threaded on import excel file 
+- [x] Make photo's file can changeable per-row
 - [ ] Make photo's file clickable to show image popup
 - [ ] Handle force closed on UI error
 - [ ] Handle error response when data not uploaded

@@ -6,7 +6,7 @@ from app.utils.bridge import BridgeApi
 from app.utils.photo_cropper import PhotoCropper
 from app.utils.table_util import TableUtil
 from app.utils.table_headers import TABLE_HEADERS
-from app.utils.utils import ImportPhotoWorker, LoginWorker, UploadWorker
+from app.utils.workers import ImportExcelWorker, ImportPhotoWorker, LoginWorker, UploadWorker
 import env
 
 
@@ -20,7 +20,7 @@ class AppView(QWidget):
         self.title = 'Sipadu Contonge'
         if env.app_debug:
             self.title = '[Debug] Sipadu Contonge'
-            
+
         self.left = 0
         self.top = 0
         self.width = 800
@@ -65,8 +65,8 @@ class AppView(QWidget):
         self.uploadBtn.clicked.connect(self.uploadAnggota)
 
         self.groupBtn = QHBoxLayout()
-        self.groupBtn.addWidget(self.addRowBtn)
-        self.groupBtn.addWidget(self.removeRowBtn)
+        # self.groupBtn.addWidget(self.addRowBtn)
+        # self.groupBtn.addWidget(self.removeRowBtn)
         self.groupBtn.addWidget(self.uploadBtn)
         # self.addRowBtn.setVisible(False)
 
@@ -77,7 +77,8 @@ class AppView(QWidget):
         footer = QLabel(self)
         footer.setOpenExternalLinks(True)
         footer.setText(
-            "Sipadu Contonge v1.1.0 - Made with <i style='color: red;'>❤️</i> by <a href='https://instagram.com/fatkhur.py'>@fatkhur.py</a>")
+            f"""Sipadu Contonge v{env.version} - Made with <span style='color: red;'>❤️</span> by <a href='https://instagram.com/fatkhur.py'>@fatkhur.py</a>
+             | Download Template Excel <a href='https://github.com/fatkhur1960/sipadu-contonge/raw/master/template/IPNU-Anggota-Nama_PAC-Nama_Ranting_Komsat.xlsx'>IPNU</a> dan <a href='https://github.com/fatkhur1960/sipadu-contonge/raw/master/template/IPPNU-Anggota-Nama_PAC-Nama_Ranting_Komsat.xlsx'>IPPNU</a>""")
 
         self.layout.addLayout(hLayout)
         self.layout.addLayout(self.groupBtn)
@@ -86,7 +87,9 @@ class AppView(QWidget):
         self.layout.addWidget(footer)
         self.setLayout(self.layout)
 
-        self.checkSeason()
+        if env.app_debug:
+            self.checkSeason()
+
         self.show()
 
     def checkSeason(self):
@@ -95,10 +98,8 @@ class AppView(QWidget):
             self.username.setEnabled(False)
             self.password.setEnabled(False)
             self.org.setEnabled(False)
-            self.loginBtn.setText("Log Out")
-            self.loginBtn.setProperty('class', 'danger-btn')
-            self.loginBtn.clicked.disconnect(self.onLogin)
-            self.loginBtn.clicked.connect(self.logout)
+            self.loginBtn.setVisible(False)
+            self.logoutBtn.setVisible(True)
             self.doAfterLogin()
             self.loginBtn.setDisabled(False)
             self.formWidget2.setDisabled(False)
@@ -146,7 +147,7 @@ class AppView(QWidget):
         self.loginBtn.setProperty('class', 'primary-btn')
         form.addWidget(self.loginBtn)
         self.loginBtn.clicked.connect(self.onLogin)
-        
+
         self.logoutBtn = QPushButton('Logout', self)
         self.logoutBtn.move(20, 80)
         self.logoutBtn.setProperty('class', 'danger-btn')
@@ -204,7 +205,7 @@ class AppView(QWidget):
         self.tableWidget = QTableWidget()
         self.tableWidget.setColumnCount(len(TABLE_HEADERS))
         self.tableWidget.setHorizontalHeaderLabels(TABLE_HEADERS)
-        self.tableWidget.setColumnHidden(38, True)
+        # self.tableWidget.setColumnHidden(38, True)
         for i in range(1, 38):
             self.tableWidget.setColumnWidth(i, 150)
 
@@ -212,40 +213,46 @@ class AppView(QWidget):
         self.file_path, _ = QFileDialog.getOpenFileName(
             self, "Pilih Data Anggota", "", "Excel Files (*.xlsx)")
         if self.file_path:
+            self.pbar.setVisible(True)
             self.tableWidget.clearContents()
             self.formWidget2.setDisabled(True)
-            self.tableUtil.parseFile(self.file_path, self.tableWidget)
-            self.formWidget2.setDisabled(False)
-            self.uploadBtn.setVisible(True)
-            self.fillTableData()
 
-    def fillTableData(self):
-        for r in range(self.tableWidget.rowCount()):
-            pac = self.tableWidget.cellWidget(r, 1)
-            rk = self.tableWidget.cellWidget(r, 2)
-            pac.addItem('-- Pilih Anak Cabang --')
-            pac.addItems([p['name'] for p in self.bridge.pacs])
-            pac.currentIndexChanged.connect(
-                lambda idx, rk=rk:
-                    self.fillTableRkItems(idx, rk)
-            )
+            self.thread = QThread()
+            self.worker = ImportExcelWorker(self.file_path)
+            self.worker.moveToThread(self.thread)
+            self.thread.started.connect(self.worker.run)
 
-            if len(self.bridge.pacs) == 1:
-                pac.setDisabled(True)
-                rk.addItems(
-                    [x['name'] for x in self.bridge.p_rks if x['id_pac'] == self.bridge.pacs[0]['id']])
-            else:
-                rk.setDisabled(True)
+            self.worker.progress.connect(self.setUploadProgress)
+            self.worker.data_length_loaded.connect(
+                lambda rowCount: self.tableWidget.setRowCount(rowCount))
+            self.worker.data_loaded.connect(lambda data: self.tableUtil.fillRow(
+                data, self.tableWidget, self.fillTablePacItems))
+            self.worker.data_load_failed.connect(self.importExcelFailed)
 
+            self.worker.finished.connect(self.thread.quit)
+            self.worker.finished.connect(self.worker.deleteLater)
+            self.thread.finished.connect(self.thread.deleteLater)
+            self.thread.finished.connect(self.importExcelFinished)
+            self.thread.start()
+
+    def importExcelFinished(self):
+        self.pbar.setVisible(False)
+        self.pbar.setValue(0)
+        self.formWidget2.setDisabled(False)
         self.populateData()
         self.setDisabledGroupCmb(False)
         self.uploadBtn.setVisible(True)
         self.importPFolderBtn.setVisible(True)
-        self.enableCrop.setHidden(False)
+        self.enableCrop.setVisible(True)
+
+    def importExcelFailed(self, message):
+        self.tableWidget.clearContents()
+        self.tableWidget.setRowCount(0)
+        self.formWidget2.setDisabled(False)
+        self.pbar.setVisible(False)
+        self.showMessage(message)
 
     def importPFolder(self):
-        options = QFileDialog.Options()
-        # options |= QFileDialog.DontUseNativeDialog
         photos_folder = QFileDialog.getExistingDirectory(
             self, "Pilih Folder Berisi Foto Anggota")
         if photos_folder:
@@ -307,7 +314,7 @@ class AppView(QWidget):
         else:
             self.username.setEnabled(True)
             self.password.setEnabled(True)
-        
+
         self.loginBtn.setDisabled(False)
         self.formWidget2.setDisabled(not status)
 
@@ -318,19 +325,24 @@ class AppView(QWidget):
         self.addRowBtn.setDisabled(False)
         self.removeRowBtn.setDisabled(False)
         self.tableWidget.setDisabled(False)
-        self.pac.addItem("-- Pilih Anak Cabang --")
+        if len(self.bridge.pacs) > 1:
+            self.pac.addItem("-- Pilih Anak Cabang --")
+
         for p in self.bridge.pacs:
             self.pac.addItem(p['name'])
 
         if len(self.bridge.pacs) == 1:
-            self.pac.setCurrentIndex(1)
-            self.pac.setEnabled(True)
+            # self.pac.setCurrentIndex(1)
+            self.pac.setDisabled(True)
             self.rk.setEnabled(True)
 
             # set Ranting/Komisariat Values
+            self.rk.currentIndexChanged.connect(self.updateTableRkItems)
+            self.rk.addItem("-- Pilih Ranting/Komisariat --")
             for rk in self.bridge.p_rks:
                 self.rk.addItem(rk['name'])
         else:
+            self.rk.currentIndexChanged.connect(self.updateTableRkItems)
             self.pac.activated.connect(self.updateRkItems)
             self.rk.setEnabled(False)
 
@@ -368,22 +380,24 @@ class AppView(QWidget):
             ac = self.tableWidget.cellWidget(r, 1)
             rk = self.tableWidget.cellWidget(r, 2)
 
-            if ac.currentIndex() == 0:
-                ac.setStyleSheet('QComboBox{background-color: #ff8a80; color: #ffffff; border-color: #b71c1c;}')
+            if ac.currentIndex() == 0 and len(self.bridge.pacs) > 1:
+                ac.setStyleSheet(
+                    'QComboBox{background-color: #ff8a80; color: #ffffff; border-color: #b71c1c;}')
                 self.uploadBtn.setDisabled(True)
             else:
                 ac.setStyleSheet('')
                 self.uploadBtn.setDisabled(False)
 
             if rk.currentText() == "" or rk.currentIndex() == 0:
-                rk.setStyleSheet('QComboBox{background-color: #ff8a80; color: #ffffff; border-color: #b71c1c;}')
+                rk.setStyleSheet(
+                    'QComboBox{background-color: #ff8a80; color: #ffffff; border-color: #b71c1c;}')
                 self.uploadBtn.setDisabled(True)
             else:
                 rk.setStyleSheet('')
                 self.uploadBtn.setDisabled(False)
 
             srk = rk.currentText()
-            items["status"] = self.tableWidget.item(r, 0).text()
+            items["status"] = self.tableWidget.cellWidget(r, 0).text()
             items["nik"] = self.tableWidget.item(r, 3).text()
             items["nama"] = self.tableWidget.item(r, 4).text().upper()
             items["tempat_lahir"] = self.tableWidget.item(r, 5).text()
@@ -401,8 +415,8 @@ class AppView(QWidget):
             items["penyelenggara_makesta"] = self.tableWidget.item(
                 r, 13).text()
             items["tempat_makesta"] = self.tableWidget.item(r, 14).text()
-            items["waktu_makesta"] = self.tableWidget.cellWidget(
-                r, 15).date().toString("yyyy-MM-dd")
+            if items["makesta"] == "sudah":
+                items["waktu_makesta"] = self.tableWidget.cellWidget(r, 15).date().toString("yyyy-MM-dd")
             items["lakmud"] = self.tableWidget.cellWidget(
                 r, 16).currentText().lower()
             items["penyelenggara_lakmud"] = self.tableWidget.item(r, 17).text()
@@ -430,7 +444,13 @@ class AppView(QWidget):
             items["pendidikan_sma"] = self.tableWidget.item(r, 30).text()
             items["pendidikan_pt"] = self.tableWidget.item(r, 31).text()
             items["pendidikan_nonformal"] = self.tableWidget.item(r, 32).text()
-            items["no_hp"] = self.tableWidget.item(r, 33).text()
+            
+            phoneNum = self.tableWidget.item(r, 33)
+            phoneNumVal = phoneNum.text()
+            if phoneNumVal.endswith('.0'):
+                phoneNumVal = '0' + phoneNumVal.replace('.0', '')
+                phoneNum.setText(phoneNumVal)
+            items["no_hp"] = phoneNumVal
             items["fb"] = self.tableWidget.item(r, 34).text()
             items["ig"] = self.tableWidget.item(r, 35).text()
             items["twitter"] = self.tableWidget.item(r, 36).text()
@@ -480,25 +500,27 @@ class AppView(QWidget):
 
     def showMessage(self, msgText):
         msg = QMessageBox()
+        msg.setWindowTitle("Info")
         msg.setText(msgText)
         msg.exec_()
 
     def onAnggotaUploaded(self, result):
         i, color, text = result
-        target = self.tableWidget.item(i, 0)
-        target.setBackground(QColor(color))
+        target = self.tableWidget.cellWidget(i, 0)
+        target.setStyleSheet(f"color: {color}")
         target.setText(text)
 
     def onAnggotaNotUploaded(self, result):
         i, color, text = result
-        target = self.tableWidget.item(i, 0)
-        target.setBackground(QColor(color))
+        target = self.tableWidget.cellWidget(i, 0)
+        target.setStyleSheet(f"color: {color}")
         target.setText(text)
 
     def onAnggotaUploading(self, result):
         i, color, text = result
-        target = self.tableWidget.item(i, 0)
-        target.setBackground(QColor(color))
+        self.tableWidget.selectRow(i)
+        target = self.tableWidget.cellWidget(i, 0)
+        target.setStyleSheet(f"color: {color}")
         target.setText(text)
 
     def setUploadProgress(self, value):
@@ -514,7 +536,6 @@ class AppView(QWidget):
             self.rk.clear()
             self.rk.addItem('-- Pilih Ranting/Komisariat --')
             self.rk.setEnabled(True)
-            self.rk.currentIndexChanged.connect(self.updateTableRkItems)
             for rk in self.current_rks:
                 self.rk.addItem(rk['name'])
         elif index == 0:
@@ -529,19 +550,20 @@ class AppView(QWidget):
         self.populateData()
 
     def fillTableRkItems(self, idx, rk):
-        self.populateData()
-        rk.currentIndexChanged.connect(lambda: self.populateData())
-        rk.setDisabled(idx == 0)
         rk.clear()
+        rk.currentIndexChanged.connect(lambda: self.populateData())
         p = self.bridge.pacs[idx - 1]
         rk.addItem('-- Pilih Ranting/Komisariat --')
         rk.addItems(
             [x['name'] for x in self.bridge.p_rks if x['id_pac'] == p['id']])
+        rk.setDisabled(False)
+        self.populateData()
 
     def fillTablePacItems(self, r):
         pac = self.tableWidget.cellWidget(r, 1)
         rk = self.tableWidget.cellWidget(r, 2)
-        pac.addItem('-- Pilih Anak Cabang --')
+        if len(self.bridge.pacs) > 1:
+            pac.addItem('-- Pilih Anak Cabang --')
         pac.addItems([p['name'] for p in self.bridge.pacs])
         pac.currentIndexChanged.connect(
             lambda idx, rk=rk:
@@ -550,6 +572,8 @@ class AppView(QWidget):
 
         if len(self.bridge.pacs) == 1:
             pac.setDisabled(True)
+            rk.addItem('-- Pilih Ranting/Komisariat --')
+            rk.currentIndexChanged.connect(self.populateData)
             rk.addItems(
                 [x['name'] for x in self.bridge.p_rks if x['id_pac'] == self.bridge.pacs[0]['id']])
         else:

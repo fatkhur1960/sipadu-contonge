@@ -1,6 +1,4 @@
-import pandas as pd
-import json
-from PyQt5.QtWidgets import QTableWidget, QTableWidgetItem, QPushButton, QComboBox, QDateEdit, QFileDialog
+from PyQt5.QtWidgets import QTableWidget, QTableWidgetItem, QPushButton, QComboBox, QDateEdit, QFileDialog, QLabel
 from PyQt5.QtGui import QColor
 from PyQt5.QtCore import Qt
 from datetime import datetime
@@ -11,11 +9,9 @@ class TableUtil:
         r = table.rowCount()
         table.setRowCount(r + 1)
 
-        st = QTableWidgetItem("WAITING")
-        st.setFlags(Qt.ItemFlag.ItemIsEnabled)
-        st.setData(QColor("#C5C5C5"))
-        st.setTextAlignment(Qt.AlignCenter)
-        table.setItem(r, 0, st)
+        st = QLabel("WAITING")
+        st.setAlignment(Qt.AlignCenter)
+        table.setCellWidget(r, 0, st)
         table.setCellWidget(r, 1, QComboBox())
         table.setCellWidget(r, 2, QComboBox())
 
@@ -107,7 +103,7 @@ class TableUtil:
 
         fileBtn = QPushButton("Pilih Foto", table)
         fileBtn.clicked.connect(
-            lambda r=r, table=table: self._selectFile(r, table))
+            lambda state, table=table, row=r: self._selectFile(state, row, table))
         table.setCellWidget(r, 38, fileBtn)
 
         return r
@@ -116,113 +112,104 @@ class TableUtil:
         r = table.currentRow()
         table.removeRow(r)
 
-    def parseFile(self, file_path: str, table: QTableWidget,):
-        df = pd.read_excel(file_path)
-        df.fillna("", inplace=True)
-        df = df.astype(str)
-        result = df.to_json(orient="table")
-        parsed = json.loads(result)
-        data = [list([x for x in i.values()][1:]) for i in parsed['data']]
+    def fillRow(self, data, table, fillData):
+        r, rows = data
 
-        table.setRowCount(len(data))
+        st = QLabel("WAITING")
+        st.setAlignment(Qt.AlignCenter)
+        table.setCellWidget(r, 0, st)
+        table.setCellWidget(r, 1, QComboBox())
+        table.setCellWidget(r, 2, QComboBox())
 
-        for r, rows in enumerate(data):
-            st = QTableWidgetItem("WAITING")
-            st.setToolTip("Upload Status")
-            st.setBackground(QColor("#C5C5C5"))
-            st.setFlags(Qt.ItemFlag.ItemIsEnabled)
-            st.setTextAlignment(Qt.AlignCenter)
-            table.setItem(r, 0, st)
-            table.setCellWidget(r, 1, QComboBox())
-            table.setCellWidget(r, 2, QComboBox())
+        fillData(r)
 
-            file_str = QTableWidgetItem("")
-            file_str.setFlags(Qt.ItemFlag.ItemIsEnabled)
-            table.setItem(r, 37, file_str)
+        file_str = QTableWidgetItem("")
+        file_str.setFlags(Qt.ItemFlag.ItemIsEnabled)
+        table.setItem(r, 37, file_str)
 
-            fileBtn = QPushButton("Pilih Foto", table)
-            fileBtn.clicked.connect(
-                lambda r=r, table=table: self._selectFile(r, table))
-            table.setCellWidget(r, 38, fileBtn)
-            table.setColumnHidden(38, True)
+        fileBtn = QPushButton("Pilih Foto", table)
+        fileBtn.clicked.connect(
+            lambda state, r=r, table=table: self._selectFile(state, r, table))
+        table.setCellWidget(r, 38, fileBtn)
 
-            for c, value in enumerate(rows):
-                is_date, output = self._extractDate(value)
-                if is_date or c == 20:
-                    dp = QDateEdit(calendarPopup=True)
-                    if isinstance(output, (datetime)):
-                        dp.setDate(output.date())
-                    dp.setDisplayFormat("dd MMM yyyy")
-                    table.setCellWidget(r, c+3, dp)
-                elif c == 6:
-                    kp = QComboBox()
-                    kp.addItems(['Anggota', 'PR', 'PK', 'PAC',
-                                'PKPT', 'PC', 'PW', 'PP'])
-                    kp.setCurrentText(value)
-                    table.setCellWidget(r, c+3, kp)
-                elif c == 7:
-                    jb = QComboBox()
-                    jb.addItem('Anggota')
-                    jb.addItem('Ketua')
-                    jb.addItem('Wakil Ketua')
-                    jb.addItem('Sekretaris')
-                    jb.addItem('Wakil Sekretaris')
-                    jb.addItem('Bendahara')
-                    jb.addItem('Wakil Bendahara')
-                    jb.addItem('Departemen Organisasi')
-                    jb.addItem('Departemen Kaderisasi')
-                    jb.addItem('Departemen Jaringan Sekolah dan Pesantren')
-                    jb.addItem('Departemen Dakwah')
-                    jb.addItem('Departemen Seni Budaya dan Olahraga')
-                    jb.addItem(
-                        'Departemen Jaringan Komunikasi dan Informatika')
-                    jb.addItem('Lembaga Corp Brigade Pembangunan')
-                    jb.addItem('Lembaga Ekonomi Koperasi dan Kewirausahaan')
-                    jb.addItem('Lembaga Pers dan Penerbitan')
-                    jb.addItem('Lembaga Anti Narkoba')
-                    jb.addItem('Lembaga Komunikasi Perguruan Tinggi')
-                    jb.addItem('Lembaga Advokasi dan Kebijakan Publik')
-                    jb.addItem('Badan Student Research Center')
-                    jb.addItem('Badan Student Crisis Center')
-                    jb.setCurrentText(value)
-                    table.setCellWidget(r, c+3, jb)
-                elif c == 8:
-                    pf = QComboBox()
-                    pf.addItems(['makesta', 'lakmud', 'lakut'])
-                    pf.setCurrentText(value)
-                    table.setCellWidget(r, c+3, pf)
-                elif c in [9, 13, 17]:
-                    op = QComboBox()
-                    op.addItems(['sudah', 'belum'])
-                    op.setCurrentText(value)
-                    table.setCellWidget(r, c+3, op)
-                elif c == 21:
-                    op = QComboBox()
-                    op.addItems(['ya', 'tidak'])
-                    op.setCurrentText(value)
-                    table.setCellWidget(r, c+3, op)
-                elif c == 24:
-                    pnd = QComboBox()
-                    pnd.addItem('Tidak Ada')
-                    pnd.addItem('SD/Sederajat')
-                    pnd.addItem('SMP/Sederajat')
-                    pnd.addItem('SMA/Sederajat')
-                    pnd.addItem('D1')
-                    pnd.addItem('D2')
-                    pnd.addItem('D3')
-                    pnd.addItem('S1')
-                    pnd.addItem('S2')
-                    pnd.addItem('S3')
-                    pnd.setCurrentText(value)
-                    table.setCellWidget(r, c+3, pnd)
-                else:
-                    table.setItem(r, c+3, QTableWidgetItem(value))
-                    
-            for col in [16, 20]:
-                target = table.cellWidget(r, col)
-                dp = table.cellWidget(r, col+3)
-                dp.setDisabled(target.currentIndex() == 1)
-                target.currentIndexChanged.connect(lambda idx, dp=dp: dp.setDisabled(idx == 1))
+        for c, value in enumerate(rows):
+            is_date, output = self._extractDate(value)
+            if is_date or c in [16, 20]:
+                dp = QDateEdit(calendarPopup=True)
+                if isinstance(output, datetime):
+                    dp.setDate(output.date())
+                dp.setDisplayFormat("dd MMM yyyy")
+                table.setCellWidget(r, c+3, dp)
+            elif c == 6:
+                kp = QComboBox()
+                kp.addItems(['Anggota', 'PR', 'PK', 'PAC',
+                            'PKPT', 'PC', 'PW', 'PP'])
+                kp.setCurrentText(value)
+                table.setCellWidget(r, c+3, kp)
+            elif c == 7:
+                jb = QComboBox()
+                jb.addItem('Anggota')
+                jb.addItem('Ketua')
+                jb.addItem('Wakil Ketua')
+                jb.addItem('Sekretaris')
+                jb.addItem('Wakil Sekretaris')
+                jb.addItem('Bendahara')
+                jb.addItem('Wakil Bendahara')
+                jb.addItem('Departemen Organisasi')
+                jb.addItem('Departemen Kaderisasi')
+                jb.addItem('Departemen Jaringan Sekolah dan Pesantren')
+                jb.addItem('Departemen Dakwah')
+                jb.addItem('Departemen Seni Budaya dan Olahraga')
+                jb.addItem(
+                    'Departemen Jaringan Komunikasi dan Informatika')
+                jb.addItem('Lembaga Corp Brigade Pembangunan')
+                jb.addItem('Lembaga Ekonomi Koperasi dan Kewirausahaan')
+                jb.addItem('Lembaga Pers dan Penerbitan')
+                jb.addItem('Lembaga Anti Narkoba')
+                jb.addItem('Lembaga Komunikasi Perguruan Tinggi')
+                jb.addItem('Lembaga Advokasi dan Kebijakan Publik')
+                jb.addItem('Badan Student Research Center')
+                jb.addItem('Badan Student Crisis Center')
+                jb.setCurrentText(value)
+                table.setCellWidget(r, c+3, jb)
+            elif c == 8:
+                pf = QComboBox()
+                pf.addItems(['makesta', 'lakmud', 'lakut'])
+                pf.setCurrentText(value)
+                table.setCellWidget(r, c+3, pf)
+            elif c in [9, 13, 17]:
+                op = QComboBox()
+                op.addItems(['sudah', 'belum'])
+                op.setCurrentText(value)
+                table.setCellWidget(r, c+3, op)
+            elif c == 21:
+                op = QComboBox()
+                op.addItems(['ya', 'tidak'])
+                op.setCurrentText(value)
+                table.setCellWidget(r, c+3, op)
+            elif c == 24:
+                pnd = QComboBox()
+                pnd.addItem('Tidak Ada')
+                pnd.addItem('SD/Sederajat')
+                pnd.addItem('SMP/Sederajat')
+                pnd.addItem('SMA/Sederajat')
+                pnd.addItem('D1')
+                pnd.addItem('D2')
+                pnd.addItem('D3')
+                pnd.addItem('S1')
+                pnd.addItem('S2')
+                pnd.addItem('S3')
+                pnd.setCurrentText(value)
+                table.setCellWidget(r, c+3, pnd)
+            else:
+                table.setItem(r, c+3, QTableWidgetItem(value))
+
+        for col in [16, 20]:
+            target = table.cellWidget(r, col)
+            dp = table.cellWidget(r, col+3)
+            dp.setDisabled(target.currentIndex() == 1)
+            target.currentIndexChanged.connect(
+                lambda idx, dp=dp: dp.setDisabled(idx == 1))
 
     def _extractDate(self, input):
         try:
@@ -230,8 +217,7 @@ class TableUtil:
         except:
             return False, input
 
-    def _selectFile(self, r, table):
-        options = QFileDialog.Options()
+    def _selectFile(self, state, r: int, table: QTableWidget):
         self.file_path, _ = QFileDialog.getOpenFileName(
             table, "Pilih Foto Anggota", "", "Image File (*.jpg)")
 
