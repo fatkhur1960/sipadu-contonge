@@ -26,9 +26,9 @@ QGroupBox {
 
 .primary-btn:disabled {
     opacity: 0.7;
-    background-color: #0097a7;
+    background-color: rgba(0, 151, 167, 0.4);
     color: #dedede;
-    border-color: #0097a7;
+    border-color: rgba(0, 151, 167, 0.7);
 }
 
 .primary-btn:focus {
@@ -93,7 +93,7 @@ QScrollBar:vertical {
 }
 
 QScrollBar::handle {
-    background: {{#0097a7|opacity(0.4)}};
+    background-color: rgba(0, 151, 167, 0.4);
 }
 
 QScrollBar::handle:horizontal {
