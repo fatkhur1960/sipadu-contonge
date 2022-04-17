@@ -518,6 +518,7 @@ class AppView(QWidget):
 
     def onAnggotaUploading(self, result):
         i, color, text = result
+        self.tableWidget.selectRow(i)
         target = self.tableWidget.cellWidget(i, 0)
         target.setStyleSheet(f"color: {color}")
         target.setText(text)
