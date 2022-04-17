@@ -175,17 +175,17 @@ class TableUtil:
             elif c == 8:
                 pf = QComboBox()
                 pf.addItems(['makesta', 'lakmud', 'lakut'])
-                pf.setCurrentText(value)
+                pf.setCurrentText(value.lower())
                 table.setCellWidget(r, c+3, pf)
             elif c in [9, 13, 17]:
                 op = QComboBox()
                 op.addItems(['sudah', 'belum'])
-                op.setCurrentText(value)
+                op.setCurrentText(value.lower())
                 table.setCellWidget(r, c+3, op)
             elif c == 21:
                 op = QComboBox()
                 op.addItems(['ya', 'tidak'])
-                op.setCurrentText(value)
+                op.setCurrentText(value.lower())
                 table.setCellWidget(r, c+3, op)
             elif c == 24:
                 pnd = QComboBox()
